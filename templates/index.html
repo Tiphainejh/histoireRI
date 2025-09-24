@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="jumbotron bg-light p-5 rounded mb-4">
+            <h2>Introduction</h2>
+            <p class="lead">Comment la relation entre les États-Unis et la Corée du Sud a-t-elle évolué depuis 1945 ? D'une occupation militaire à une alliance stratégique, cette relation illustre les mutations de l'hégémonie américaine en Asie de l'Est.</p>
+        </div>
+
+        <h3>Chronologie</h3>
+        <div class="timeline">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">1945-1960 : L'hégémonie imposée</h5>
+                    <p class="card-text">Partition, guerre de Corée et installation du système d'alliance.</p>
+                    <a href="{{ url_for('periode1') }}" class="btn btn-primary">En savoir plus</a>
+                </div>
+            </div>
+            
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">1960-1987 : L'hégémonie autoritaire</h5>
+                    <p class="card-text">Soutien américain aux régimes dictatoriaux et miracle économique.</p>
+                    <a href="{{ url_for('periode2') }}" class="btn btn-primary">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">1987-2000 : L'hégémonie démocratique</h5>
+                    <p class="card-text">Démocratisation et renégociation des termes de l'alliance.</p>
+                    <a href="{{ url_for('periode3') }}" class="btn btn-primary">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">2000-2020 : L'hégémonie négociée</h5>
+                    <p class="card-text">Quête d'autonomie et influence de l'opinion publique.</p>
+                    <a href="{{ url_for('periode4') }}" class="btn btn-primary">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

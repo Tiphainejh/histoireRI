@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+header {
+    background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+nav.navbar {
+    margin-bottom: 2rem;
+}
+
+footer {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.container {
+    max-width: 900px;
+}
+
+/* Couleurs par période */
+:root {
+  --period1-bg: #f4f1e8;
+  --period1-accent: #8b0000;
+  --period1-text: #2c2c2c;
+  
+  --period2-bg: #ff1744;
+  --period2-accent: #00e5ff;
+  --period2-text: #ffff00;
+  
+  --period3-bg: #424242;
+  --period3-accent: #ff6ec7;
+  --period3-text: #00ff41;
+  
+  --period4-bg: #000;
+  --period4-accent: #ff00ff;
+  --period4-text: #00ffff;
+}
+
+/* Classes pour chaque période */
+.period1 {
+  background: var(--period1-bg);
+  color: var(--period1-text);
+}
+
+.period1 h2 {
+  color: var(--period1-accent);
+  font-family: 'Courier New', monospace;
+}
+
+.period2 {
+  background: var(--period2-bg);
+  color: var(--period2-text);
+}
+
+.period2 h2 {
+  color: var(--period2-accent);
+  font-family: Impact, sans-serif;
+}
+
+.period3 {
+  background: var(--period3-bg);
+  color: var(--period3-text);
+}
+.period3 h2 {
+  color: var(--period3-accent);
+  font-family: 'Lucida Console', monospace;
+}   
+.period4 {
+  background: var(--period4-bg);
+  color: var(--period4-text);
+}
+.period4 h2 {
+  color: var(--period4-accent);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
