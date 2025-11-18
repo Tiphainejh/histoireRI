@@ -1,8 +1,85 @@
 {% extends "base.html" %}
-{% block title %}Ressources{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block title %}{{ title }} - États-Unis et Corée du Sud{% endblock %}
+
 {% block content %}
-<div >
-    <h2>Ressources</h2>
-    <p>Description</p>
+<div class="container">
+    <section style="padding: 2rem 0;">
+        <h2 style="font-size: 2.5rem; color: #fff; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); margin-bottom: 1rem;">
+            Sources et ressources
+        </h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; max-width: 900px;">
+            Bibliographie et sources utilisées pour l'analyse des relations entre les États-Unis 
+            et la Corée du Sud (1945-2020).
+        </p>
+    </section>
+
+    <section style="margin-top: 3rem;">
+        <div style="background: rgba(255,255,255,0.95); padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); margin-bottom: 2rem;">
+            <h3 style="font-size: 2rem; color: #1e3c72; margin-bottom: 1.5rem; border-bottom: 3px solid #7e22ce; padding-bottom: 0.5rem;">
+                📚 Ouvrages et articles académiques
+            </h3>
+            
+            <div style="margin-bottom: 2rem;">
+                <h4 style="color: #2a5298; font-size: 1.3rem; margin-bottom: 0.8rem;">Sur la guerre de Corée et la partition</h4>
+                <ul style="color: #333; line-height: 2; font-size: 1rem;">
+                    <li><strong>Morillot, J.</strong> (2018). "Les deux Corées depuis 1945 : guerre froide et nationalisme coréen", <em>Pouvoirs</em>, Paris.</li>
+                    <li><strong>Dujarric, R.</strong> (2018). "America confronts North Korea: A historical perspective and a look at the future", <em>Monde chinois</em>, Paris.</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h4 style="color: #2a5298; font-size: 1.3rem; margin-bottom: 0.8rem;">Sur les régimes autoritaires et la démocratisation</h4>
+                <ul style="color: #333; line-height: 2; font-size: 1rem;">
+                    <li><strong>Kim, S.</strong> (2014). "La réforme de la police en Corée du Sud : le chemin inachevé", <em>Droit et politique</em>, Grenoble.</li>
+                    <li><strong>Lee, N.</strong> (2014). "Peppermint Candy et les événements de Gwangju en 1980", <em>Revue Française d'Histoire des Idées Politiques</em>.</li>
+                    <li><strong>Chool, H.</strong> (2014). "L'évolution historique de la Corée du Sud", <em>Outre-Terre</em>.</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h4 style="color: #2a5298; font-size: 1.3rem; margin-bottom: 0.8rem;">Sur les relations américano-coréennes</h4>
+                <ul style="color: #333; line-height: 2; font-size: 1rem;">
+                    <li><strong>Leveau, A.</strong> (2013). "Corée du Sud-États-Unis. Une relation sous influence", <em>Outre-Terre</em>, Paris.</li>
+                    <li><strong>Fiori, A.</strong> (2014). "Manifestations antiaméricaines en Corée du Sud dans les années 2000 : une forme de nationalisme revendiqué", <em>Outre-Terre</em>, Paris.</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 0;">
+                <h4 style="color: #2a5298; font-size: 1.3rem; margin-bottom: 0.8rem;">Sur l'économie et la crise de 1997</h4>
+                <ul style="color: #333; line-height: 2; font-size: 1rem;">
+                    <li><strong>Cho, H.</strong> (2011). "L'économie politique coréenne", <em>Hérodote</em>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.95); padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); margin-bottom: 2rem;">
+            <h3 style="font-size: 2rem; color: #1e3c72; margin-bottom: 1.5rem; border-bottom: 3px solid #7e22ce; padding-bottom: 0.5rem;">
+                🌐 Ressources en ligne
+            </h3>
+            <p style="color: #666; font-style: italic; margin: 0;">
+                Cette section sera complétée avec vos sources en ligne (sites institutionnels, archives, etc.)
+            </p>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.95); padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+            <h3 style="font-size: 2rem; color: #1e3c72; margin-bottom: 1.5rem; border-bottom: 3px solid #7e22ce; padding-bottom: 0.5rem;">
+                🎬 Sources audiovisuelles
+            </h3>
+            <p style="color: #666; font-style: italic; margin: 0;">
+                Cette section sera complétée avec vos sources audiovisuelles (documentaires, archives vidéo, etc.)
+            </p>
+        </div>
+    </section>
+
+    <section style="margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px; border: 2px solid rgba(255,255,255,0.2);">
+        <p style="color: rgba(255,255,255,0.9); text-align: center; font-size: 0.95rem; margin: 0;">
+            💡 <strong>Note méthodologique :</strong> Toutes les citations présentes dans ce site sont 
+            extraites des sources académiques listées ci-dessus. Les numéros de page sont indiqués 
+            dans le texte lorsque disponibles.
+        </p>
+    </section>
 </div>
 {% endblock %}

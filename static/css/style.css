@@ -1,83 +1,1173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #212529;
-}
-
-header {
-    background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
-}
-
-h1, h2 {
-    font-weight: 700;
-}
-
-nav.navbar {
-    margin-bottom: 2rem;
-}
-
-footer {
-    font-size: 0.9rem;
-    color: #6c757d;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px;
+    padding: 2rem 1rem;
 }
 
-/* Couleurs par période */
-:root {
-  --period1-bg: #f4f1e8;
-  --period1-accent: #8b0000;
-  --period1-text: #2c2c2c;
-  
-  --period2-bg: #ff1744;
-  --period2-accent: #00e5ff;
-  --period2-text: #ffff00;
-  
-  --period3-bg: #424242;
-  --period3-accent: #ff6ec7;
-  --period3-text: #00ff41;
-  
-  --period4-bg: #000;
-  --period4-accent: #ff00ff;
-  --period4-text: #00ffff;
-}
-
-/* Classes pour chaque période */
+/* ============================================
+   PÉRIODE 1: 1945-1960 - GUERRE ET PARTITION
+   Style militaire, documents officiels, carte coupée
+   ============================================ */
 .period1 {
-  background: var(--period1-bg);
-  color: var(--period1-text);
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #ecf0f1;
+    font-family: 'Courier New', monospace;
+}
+
+.period1 header {
+    background: 
+        linear-gradient(rgba(44, 62, 80, 0.95), rgba(44, 62, 80, 0.95)),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(231, 76, 60, 0.1) 2px,
+            rgba(231, 76, 60, 0.1) 4px
+        );
+    padding: 3rem 0;
+    position: relative;
+    border-bottom: 5px solid #e74c3c;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.period1 header::before {
+    content: '38° PARALLEL';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #e74c3c;
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    border: 2px solid #e74c3c;
+    padding: 0.3rem 1rem;
+    background: rgba(0,0,0,0.3);
+}
+
+.period1 header h1 {
+    font-family: 'Courier New', monospace;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #e74c3c;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 1;
+}
+
+.period1 header p {
+    color: #bdc3c7;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+}
+
+.period1 nav.navbar {
+    background: rgba(0,0,0,0.8) !important;
+    box-shadow: 0 4px 20px rgba(231, 76, 60, 0.3);
+    padding: 0.8rem 0;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.period1 .navbar-nav .nav-link {
+    color: #ecf0f1 !important;
+    font-weight: 700;
+    padding: 0.6rem 1.5rem !important;
+    margin: 0 0.2rem;
+    border: 2px solid transparent;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.period1 .navbar-nav .nav-link:hover {
+    background: rgba(231, 76, 60, 0.2);
+    border: 2px solid #e74c3c;
+    color: #e74c3c !important;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+}
+
+.period1 footer {
+    background: rgba(0,0,0,0.9);
+    color: #bdc3c7;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 5px solid #e74c3c;
+    font-family: 'Courier New', monospace;
+}
+
+.period1 .hero-visual {
+    background: rgba(0,0,0,0.6);
+    border: 3px solid #e74c3c;
+    border-left: 10px solid #e74c3c;
+    padding: 3rem;
+    margin: 2rem 0;
+    position: relative;
+    box-shadow: 
+        inset 0 0 30px rgba(231, 76, 60, 0.2),
+        0 10px 40px rgba(0,0,0,0.5);
+}
+
+.period1 .hero-visual::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    height: 30px;
+    background: #2c3e50;
+    padding: 0.3rem 1.5rem;
+    font-weight: 900;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    border: 2px solid #e74c3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.period1 .hero-visual::before {
+    content: '38° N';
+    background: #2c3e50;
+    color: #e74c3c;
+}
+
+.period1 .hero-visual::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: 
+        linear-gradient(to bottom, 
+            transparent 0%, 
+            transparent 45%, 
+            #e74c3c 45%, 
+            #e74c3c 55%, 
+            transparent 55%, 
+            transparent 100%
+        );
+    opacity: 0.3;
+}
+
+.period1 h1 {
+    font-family: 'Courier New', monospace;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #e74c3c;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+    line-height: 1.2;
+    border-bottom: 3px solid #e74c3c;
+    padding-bottom: 1rem;
+}
+
+.period1 .period-card {
+    background: rgba(52, 73, 94, 0.8);
+    border: 2px solid #7f8c8d;
+    border-left: 5px solid #e74c3c;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    position: relative;
 }
 
 .period1 h2 {
-  color: var(--period1-accent);
-  font-family: 'Courier New', monospace;
+    font-family: 'Courier New', monospace;
+    font-size: 2rem;
+    color: #e74c3c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
 }
 
+/* ============================================
+   PÉRIODE 2: 1960-1987 - AFFICHES DE PROTESTATION
+   Style street art, graffiti, pochoirs, militant
+   ============================================ */
 .period2 {
-  background: var(--period2-bg);
-  color: var(--period2-text);
+    background: #1a1a1a;
+    color: #fff;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    position: relative;
+}
+
+.period2::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.02) 2px,
+            rgba(255, 255, 255, 0.02) 4px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.02) 2px,
+            rgba(255, 255, 255, 0.02) 4px
+        );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.period2 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.period2 header {
+    background: #000;
+    padding: 3rem 0;
+    position: relative;
+    border-bottom: 10px solid #dc143c;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+}
+
+.period2 header::before {
+    content: '民主化';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    font-size: 15rem;
+    color: rgba(220, 20, 60, 0.1);
+    font-weight: 900;
+    pointer-events: none;
+}
+
+.period2 header h1 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 
+        5px 5px 0px #dc143c,
+        10px 10px 0px #000;
+    letter-spacing: -1px;
+    position: relative;
+    z-index: 1;
+    transform: rotate(-2deg);
+}
+
+.period2 header p {
+    color: #dc143c;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 0px #000;
+    position: relative;
+    z-index: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.period2 nav.navbar {
+    background: #000 !important;
+    box-shadow: 0 5px 0px #dc143c;
+    padding: 1rem 0;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.period2 .navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 900;
+    padding: 0.6rem 1.5rem !important;
+    margin: 0 0.3rem;
+    border: 3px solid transparent;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.period2 .navbar-nav .nav-link:hover {
+    background: #dc143c;
+    border: 3px solid #fff;
+    color: #000 !important;
+    transform: rotate(-2deg);
+    box-shadow: 4px 4px 0px #fff;
+}
+
+.period2 footer {
+    background: #000;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 10px solid #dc143c;
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+}
+
+.period2 .hero-visual {
+    background: 
+        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+        repeating-linear-gradient(
+            45deg,
+            transparent 0px,
+            transparent 10px,
+            rgba(220, 20, 60, 0.1) 10px,
+            rgba(220, 20, 60, 0.1) 20px
+        );
+    border: 8px solid #dc143c;
+    padding: 3rem;
+    margin: 2rem 0;
+    position: relative;
+    box-shadow: 
+        10px 10px 0px rgba(220, 20, 60, 0.5),
+        20px 20px 0px rgba(0,0,0,0.3);
+    transform: rotate(-1deg);
+}
+
+.period2 .hero-visual::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background: 
+        radial-gradient(circle at center, #000 20%, transparent 20%),
+        conic-gradient(from 0deg, #dc143c 0deg 90deg, transparent 90deg 180deg, #dc143c 180deg 270deg, transparent 270deg 360deg);
+    border: 5px solid #fff;
+    border-radius: 50%;
+    transform: rotate(15deg);
+    box-shadow: 
+        5px 5px 0px #dc143c,
+        10px 10px 0px #000;
+}
+
+.period2 h1 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 
+        4px 4px 0px #dc143c,
+        8px 8px 0px #000;
+    letter-spacing: -1px;
+    transform: rotate(-1deg);
+    display: inline-block;
+}
+
+.period2 .period-card {
+    background: rgba(30, 30, 30, 0.95);
+    border: 5px solid #fff;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 
+        8px 8px 0px #dc143c,
+        16px 16px 0px rgba(0,0,0,0.5);
+    position: relative;
+    transform: rotate(0.5deg);
+}
+
+.period2 .period-card:nth-child(even) {
+    transform: rotate(-0.5deg);
+    box-shadow: 
+        -8px 8px 0px #dc143c,
+        -16px 16px 0px rgba(0,0,0,0.5);
 }
 
 .period2 h2 {
-  color: var(--period2-accent);
-  font-family: Impact, sans-serif;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 2.5rem;
+    color: #dc143c;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px #000;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
 }
 
+.period2 h2::before {
+    content: '/// ';
+    color: #fff;
+}
+
+/* ============================================
+   PÉRIODE 3: 1987-2000 - PROPAGANDE DÉMOCRATIQUE
+   Style affiche vintage coréenne, drapeau taegukgi
+   ============================================ */
 .period3 {
-  background: var(--period3-bg);
-  color: var(--period3-text);
+    background: #f5f5f5;
+    color: #1a1a1a;
+    font-family: 'Arial Black', sans-serif;
 }
+
+.period3 header {
+    background: 
+        linear-gradient(135deg, #003478 0%, #cd202c 100%);
+    padding: 3rem 0;
+    position: relative;
+    border-bottom: 8px solid #000;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.period3 header::before {
+    content: '☆ ☆ ☆';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 4rem;
+}
+
+.period3 header::after {
+    content: '大韓民國';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #cd202c;
+    padding: 0.5rem 3rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+    border: 5px solid #000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.period3 header h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 
+        5px 5px 0px #000,
+        0 0 30px rgba(205, 32, 44, 0.5);
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.period3 header p {
+    color: #fff;
+    font-size: 1.4rem;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.period3 nav.navbar {
+    background: #fff !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    padding: 1rem 0;
+    border-bottom: 5px solid #cd202c;
+}
+
+.period3 .navbar-nav .nav-link {
+    color: #003478 !important;
+    font-weight: 900;
+    padding: 0.6rem 1.5rem !important;
+    margin: 0 0.3rem;
+    border: 3px solid transparent;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.period3 .navbar-nav .nav-link:hover {
+    background: #cd202c;
+    border: 3px solid #003478;
+    color: #fff !important;
+    box-shadow: 0 5px 15px rgba(205, 32, 44, 0.5);
+    transform: translateY(-2px);
+}
+
+.period3 footer {
+    background: 
+        linear-gradient(135deg, #003478 0%, #cd202c 100%);
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 8px solid #000;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.period3 .hero-visual {
+    background: #fff;
+    border: 10px solid #003478;
+    padding: 3rem;
+    margin: 2rem 0;
+    position: relative;
+    box-shadow: 
+        15px 15px 0px #cd202c,
+        30px 30px 0px rgba(0,0,0,0.2);
+}
+
+.period3 .hero-visual::before {
+    content: '🕊️';
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 6rem;
+    filter: 
+        drop-shadow(5px 5px 0px #003478)
+        drop-shadow(10px 10px 0px #cd202c);
+}
+
+.period3 .hero-visual::after {
+    content: '●';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    color: #cd202c;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 8px solid #003478;
+    outline: 4px solid #000;
+    outline-offset: 3px;
+    line-height: 1;
+    padding-bottom: 8px; /* ou margin-bottom: -3px; */
+}
+
+.period3 h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #003478;
+    text-transform: uppercase;
+    text-shadow: 
+        4px 4px 0px #cd202c,
+        8px 8px 0px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+}
+
+.period3 .period-card {
+    background: #fff;
+    border: 6px solid #000;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 
+        10px 10px 0px #003478,
+        20px 20px 0px rgba(205, 32, 44, 0.5);
+    position: relative;
+}
+
+.period3 .period-card::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 4px solid #000;
+    border-radius: 50%;
+}
+
+.period3 .period-card::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 40px;
+    width: 30px;
+    height: 30px;
+    background: #cd202c;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
 .period3 h2 {
-  color: var(--period3-accent);
-  font-family: 'Lucida Console', monospace;
-}   
-.period4 {
-  background: var(--period4-bg);
-  color: var(--period4-text);
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2.5rem;
+    color: #cd202c;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px rgba(0, 52, 120, 0.3);
+    margin-bottom: 1.5rem;
 }
+
+.period3 h2::before {
+    content: '▶ ';
+    color: #003478;
+}
+
+/* ============================================
+   PÉRIODE 4: 2000-2020 - SEOUL BY NIGHT
+   Style néons, gratte-ciels, écrans LED, futuriste
+   ============================================ */
+.period4 {
+    background: 
+        linear-gradient(180deg, #0a0a1f 0%, #1a0a2e 50%, #0a0a1f 100%);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.period4::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 100px,
+            rgba(255, 0, 150, 0.03) 100px,
+            rgba(255, 0, 150, 0.03) 101px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 100px,
+            rgba(0, 255, 255, 0.03) 100px,
+            rgba(0, 255, 255, 0.03) 101px
+        );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.period4 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.period4 header {
+    background: 
+        linear-gradient(180deg, rgba(10, 10, 31, 0.95) 0%, rgba(26, 10, 46, 0.95) 100%);
+    padding: 3rem 0;
+    position: relative;
+    border-bottom: 2px solid #ff0096;
+    box-shadow: 
+        0 0 50px rgba(255, 0, 150, 0.5),
+        0 0 100px rgba(0, 255, 255, 0.3),
+        0 10px 40px rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+
+.period4 header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 0, 150, 0.1) 25%,
+        rgba(0, 255, 255, 0.1) 50%,
+        rgba(255, 0, 150, 0.1) 75%,
+        transparent 100%
+    );
+    animation: neonSweep 4s ease-in-out infinite;
+}
+
+@keyframes neonSweep {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(50%); }
+}
+
+.period4 header h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 10px #ff0096,
+        0 0 20px #ff0096,
+        0 0 40px #ff0096,
+        0 0 80px #00ffff,
+        4px 4px 0px rgba(0,0,0,0.8);
+    letter-spacing: 5px;
+    position: relative;
+    z-index: 1;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 
+            0 0 10px #ff0096,
+            0 0 20px #ff0096,
+            0 0 40px #ff0096,
+            0 0 80px #00ffff,
+            4px 4px 0px rgba(0,0,0,0.8);
+    }
+    100% {
+        text-shadow: 
+            0 0 20px #ff0096,
+            0 0 40px #ff0096,
+            0 0 80px #ff0096,
+            0 0 120px #00ffff,
+            4px 4px 0px rgba(0,0,0,0.8);
+    }
+}
+
+.period4 header p {
+    color: #00ffff;
+    font-size: 1.3rem;
+    text-shadow: 
+        0 0 10px #00ffff,
+        2px 2px 10px rgba(0,0,0,0.8);
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.period4 nav.navbar {
+    background: rgba(10, 10, 31, 0.95) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: 
+        0 0 20px rgba(255, 0, 150, 0.4),
+        0 4px 30px rgba(0,0,0,0.8);
+    padding: 1rem 0;
+    border-bottom: 1px solid #ff0096;
+    border-top: 1px solid #00ffff;
+}
+
+.period4 .navbar-nav .nav-link {
+    color: #00ffff !important;
+    font-weight: 700;
+    padding: 0.6rem 1.5rem !important;
+    margin: 0 0.3rem;
+    border: 2px solid transparent;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.period4 .navbar-nav .nav-link:hover {
+    background: rgba(255, 0, 150, 0.2);
+    border: 2px solid #ff0096;
+    color: #ff0096 !important;
+    box-shadow: 
+        0 0 20px rgba(255, 0, 150, 0.6),
+        inset 0 0 20px rgba(0, 255, 255, 0.2);
+    text-shadow: 0 0 15px #ff0096;
+}
+
+.period4 footer {
+    background: rgba(10, 10, 31, 0.95);
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 2px solid #ff0096;
+    box-shadow: 
+        0 0 40px rgba(255, 0, 150, 0.4),
+        0 -10px 30px rgba(0,0,0,0.8);
+}
+
+.period4 .hero-visual {
+    background: rgba(10, 10, 31, 0.8);
+    backdrop-filter: blur(20px);
+    border: 3px solid #ff0096;
+    border-radius: 0;
+    padding: 3rem;
+    margin: 2rem 0;
+    position: relative;
+    box-shadow: 
+        0 0 30px rgba(255, 0, 150, 0.6),
+        0 0 60px rgba(0, 255, 255, 0.4),
+        inset 0 0 60px rgba(255, 0, 150, 0.1);
+    animation: cardPulse 3s ease-in-out infinite;
+}
+
+@keyframes cardPulse {
+    0%, 100% {
+        box-shadow: 
+            0 0 30px rgba(255, 0, 150, 0.6),
+            0 0 60px rgba(0, 255, 255, 0.4),
+            inset 0 0 60px rgba(255, 0, 150, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 0 50px rgba(255, 0, 150, 0.8),
+            0 0 100px rgba(0, 255, 255, 0.6),
+            inset 0 0 80px rgba(255, 0, 150, 0.2);
+    }
+}
+
+.period4 .hero-visual::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    background: 
+        linear-gradient(to top, transparent 0%, transparent 70%, #ff0096 70%, #ff0096 75%, transparent 75%),
+        linear-gradient(to top, transparent 0%, transparent 50%, #00ffff 50%, #00ffff 55%, transparent 55%),
+        linear-gradient(to top, transparent 0%, transparent 30%, #ff0096 30%, #ff0096 35%, transparent 35%),
+        linear-gradient(90deg, transparent 10%, #ff0096 10%, #ff0096 15%, transparent 15%, transparent 30%, #00ffff 30%, #00ffff 35%, transparent 35%, transparent 65%, #ff0096 65%, #ff0096 70%, transparent 70%, transparent 85%, #00ffff 85%, #00ffff 90%, transparent 90%);
+    filter: 
+        drop-shadow(0 0 20px #ff0096)
+        drop-shadow(0 0 40px #00ffff);
+}
+
+.period4 .hero-visual::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 20px,
+            rgba(255, 0, 150, 0.3) 20px,
+            rgba(255, 0, 150, 0.3) 21px,
+            transparent 21px,
+            transparent 40px,
+            rgba(0, 255, 255, 0.3) 40px,
+            rgba(0, 255, 255, 0.3) 41px
+        );
+    transform: perspective(500px) rotateX(60deg);
+    transform-origin: bottom;
+    opacity: 0.6;
+}
+
+.period4 h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 10px #ff0096,
+        0 0 20px #ff0096,
+        0 0 40px #00ffff;
+    letter-spacing: 3px;
+}
+
+.period4 .period-card {
+    background: rgba(26, 10, 46, 0.7);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 0, 150, 0.6);
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 
+        0 0 30px rgba(255, 0, 150, 0.3),
+        0 10px 40px rgba(0,0,0,0.6);
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.period4 .period-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        #00ffff 50%,
+        transparent 100%
+    );
+    animation: scanlineCard 2s linear infinite;
+}
+
+@keyframes scanlineCard {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(500px); opacity: 0; }
+}
+
+.period4 .period-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 0 50px rgba(255, 0, 150, 0.6),
+        0 0 100px rgba(0, 255, 255, 0.4),
+        0 20px 60px rgba(0,0,0,0.8);
+    border-color: #ff0096;
+}
+
 .period4 h2 {
-  color: var(--period4-accent);
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ff0096;
+    text-shadow: 
+        0 0 15px #ff0096,
+        0 0 30px #00ffff,
+        3px 3px 0px rgba(0,0,0,0.8);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   PAGE D'ACCUEIL
+   ============================================ */
+.home {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+}
+
+.home header {
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95) 0%, rgba(126, 34, 206, 0.95) 100%);
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.home header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.05) 10px,
+        rgba(255,255,255,0.05) 20px
+    );
+    animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.home header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 3px 3px 20px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.home header p {
+    color: rgba(255,255,255,0.95);
+    font-size: 1.3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.home nav.navbar {
+    background: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    padding: 1rem 0;
+}
+
+.home .navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem !important;
+    margin: 0 0.3rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.home .navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.home footer {
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95) 0%, rgba(126, 34, 206, 0.95) 100%);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/* PREVIEWS PAGE D'ACCUEIL */
+.period-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.period-preview {
+    padding: 2rem;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.period-preview:hover {
+    transform: scale(1.03) translateY(-5px);
+}
+
+.period-preview.period1 {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    border: 3px solid #e74c3c;
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+}
+
+.period-preview.period1:hover {
+    box-shadow: 0 15px 50px rgba(231, 76, 60, 0.5);
+}
+
+.period-preview.period1 h3 {
+    font-family: 'Courier New', monospace;
+    color: #e74c3c;
+}
+
+.period-preview.period1 h4 {
+    font-family: 'Courier New', monospace;
+    color: #ecf0f1;
+}
+
+.period-preview.period1 p {
+    color: #bdc3c7;
+}
+
+.period-preview.period2 {
+    background: #1a1a1a;
+    border: 5px solid #fff;
+    box-shadow: 
+        8px 8px 0px #dc143c,
+        16px 16px 0px rgba(0,0,0,0.5);
+}
+
+.period-preview.period2:hover {
+    box-shadow: 
+        12px 12px 0px #dc143c,
+        24px 24px 0px rgba(0,0,0,0.7);
+}
+
+.period-preview.period2 h3 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    color: #dc143c;
+    text-shadow: 3px 3px 0px #000;
+}
+
+.period-preview.period2 h4 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.period-preview.period2 p {
+    color: #ddd;
+}
+
+.period-preview.period3 {
+    background: linear-gradient(135deg, #003478 0%, #cd202c 100%);
+    border: 6px solid #000;
+    box-shadow: 
+        10px 10px 0px #fff,
+        20px 20px 0px rgba(0,0,0,0.5);
+}
+
+.period-preview.period3:hover {
+    box-shadow: 
+        15px 15px 0px #fff,
+        30px 30px 0px rgba(0,0,0,0.7);
+}
+
+.period-preview.period3 h3 {
+    font-family: 'Arial Black', sans-serif;
+    color: #fff;
+    text-shadow: 3px 3px 0px #000;
+}
+
+.period-preview.period3 h4 {
+    font-family: 'Arial Black', sans-serif;
+    color: #fff;
+}
+
+.period-preview.period3 p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.period-preview.period4 {
+    background: linear-gradient(180deg, #0a0a1f 0%, #1a0a2e 100%);
+    border: 3px solid #ff0096;
+    box-shadow: 
+        0 0 30px rgba(255, 0, 150, 0.6),
+        0 0 60px rgba(0, 255, 255, 0.4),
+        0 10px 40px rgba(0,0,0,0.8);
+}
+
+.period-preview.period4:hover {
+    box-shadow: 
+        0 0 50px rgba(255, 0, 150, 0.8),
+        0 0 100px rgba(0, 255, 255, 0.6),
+        0 15px 60px rgba(0,0,0,1);
+}
+
+.period-preview.period4 h3 {
+    font-family: 'Arial', sans-serif;
+    color: #ff0096;
+    text-shadow: 
+        0 0 15px #ff0096,
+        0 0 30px #00ffff;
+}
+
+.period-preview.period4 h4 {
+    font-family: 'Arial', sans-serif;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.period-preview.period4 p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .period1 h1, .period2 h1, .period3 h1, .period4 h1 {
+        font-size: 2rem;
+    }
+    
+    .period-preview {
+        margin-bottom: 2rem;
+    }
+    
+    .period2 header h1, .period4 header h1 {
+        font-size: 2.5rem;
+    }
 }

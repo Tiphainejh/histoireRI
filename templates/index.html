@@ -1,46 +1,77 @@
 {% extends "base.html" %}
 
+{% block body_class %}home{% endblock %}
+
+{% block title %}Accueil - L'évolution de l'hégémonie américaine en Corée du Sud{% endblock %}
+
 {% block content %}
-<div class="row">
-    <div class="col-lg-8 mx-auto">
-        <div class="jumbotron bg-light p-5 rounded mb-4">
-            <h2>Introduction</h2>
-            <p class="lead">Comment la relation entre les États-Unis et la Corée du Sud a-t-elle évolué depuis 1945 ? D'une occupation militaire à une alliance stratégique, cette relation illustre les mutations de l'hégémonie américaine en Asie de l'Est.</p>
+<div class="container">
+    <section class="text-center" style="padding: 3rem 0;">
+        <h2 style="font-size: 2.5rem; color: #fff; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">
+            Les États-Unis et la Corée du Sud (1945-2020)
+        </h2>
+        <p class="lead" style="color: rgba(255,255,255,0.9); margin-top: 1rem; font-size: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Comment la relation entre les États-Unis et la Corée du Sud a-t-elle évolué depuis 1945 ? 
+            D'une occupation militaire à une alliance stratégique, cette relation illustre les mutations 
+            de l'hégémonie américaine en Asie de l'Est.
+        </p>
+    </section>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <a href="/periode1" class="period-link">
+                <div class="period-preview period1">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: #e74c3c;">1945-1960</h3>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem; color: #ecf0f1;">L'hégémonie imposée</h4>
+                    <p style="font-size: 1rem; line-height: 1.6; color: #bdc3c7;">
+                        Partition au 38e parallèle, guerre de Corée (1950-1953), installation des bases 
+                        militaires américaines. Les États-Unis "sauvent le Sud de l'extinction" et instaurent 
+                        une dépendance permanente.
+                    </p>
+                </div>
+            </a>
         </div>
 
-        <h3>Chronologie</h3>
-        <div class="timeline">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">1945-1960 : L'hégémonie imposée</h5>
-                    <p class="card-text">Partition, guerre de Corée et installation du système d'alliance.</p>
-                    <a href="{{ url_for('periode1') }}" class="btn btn-primary">En savoir plus</a>
+        <div class="col-md-6">
+            <a href="/periode2" class="period-link">
+                <div class="period-preview period2">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: #dc143c; text-shadow: 2px 2px 0px #000;">✊ 1960-1987</h3>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem; color: #fff; text-shadow: 2px 2px 0px #000;">L'hégémonie autoritaire</h4>
+                    <p style="font-size: 1rem; line-height: 1.6; color: #ddd;">
+                        Soutien américain aux dictatures militaires (Park Chung-hee, Chun Doo-hwan). 
+                        Massacre de Gwangju (1980), "camions grillagés", émergence du sentiment anti-américain. 
+                        Participation à la guerre du Vietnam.
+                    </p>
                 </div>
-            </div>
-            
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">1960-1987 : L'hégémonie autoritaire</h5>
-                    <p class="card-text">Soutien américain aux régimes dictatoriaux et miracle économique.</p>
-                    <a href="{{ url_for('periode2') }}" class="btn btn-primary">En savoir plus</a>
-                </div>
-            </div>
+            </a>
+        </div>
 
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">1987-2000 : L'hégémonie démocratique</h5>
-                    <p class="card-text">Démocratisation et renégociation des termes de l'alliance.</p>
-                    <a href="{{ url_for('periode3') }}" class="btn btn-primary">En savoir plus</a>
+        <div class="col-md-6">
+            <a href="/periode3" class="period-link">
+                <div class="period-preview period3">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: #fff; text-shadow: 2px 2px 0px #000;">🕊️ 1987-2000</h3>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem; color: #fff;">L'hégémonie démocratique</h4>
+                    <p style="font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.95);">
+                        Démocratisation de 1987, premiers présidents civils. Crise financière de 1997 
+                        et intervention du FMI. Sunshine Policy de Kim Dae-jung et sommet historique 
+                        de Pyongyang (2000).
+                    </p>
                 </div>
-            </div>
+            </a>
+        </div>
 
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">2000-2020 : L'hégémonie négociée</h5>
-                    <p class="card-text">Quête d'autonomie et influence de l'opinion publique.</p>
-                    <a href="{{ url_for('periode4') }}" class="btn btn-primary">En savoir plus</a>
+        <div class="col-md-6">
+            <a href="/periode4" class="period-link">
+                <div class="period-preview period4">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: #ff0096; text-shadow: 0 0 15px #ff0096;">🏙️ 2000-2020</h3>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem; color: #00ffff; text-shadow: 0 0 10px #00ffff;">L'hégémonie négociée</h4>
+                    <p style="font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.9);">
+                        Montée en puissance de la Corée du Sud (économie, soft power avec la K-wave). 
+                        Relations plus équilibrées avec les États-Unis. Tensions avec la Corée du Nord 
+                        et rôle de médiateur américain.
+                    </p>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>
