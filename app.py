@@ -38,6 +38,13 @@ def periode4():
 def ressources():
     return render_template('ressources.html',
                          title="Sources et ressources")
+@app.route('/jeju')
+def jeju():
+    return render_template('jeju.html', title='Le massacre de Jeju')
+
+@app.route('/conclusion')
+def conclusion():
+    return render_template('conclusion.html', title='Conclusion')
 
 if __name__ == '__main__':
     app.run(debug=True)

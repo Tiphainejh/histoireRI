@@ -15,6 +15,34 @@ body {
     padding: 2rem 1rem;
 }
 
+/* ========== SECTION SOURCES (toutes périodes) ========== */
+.sources-section {
+    margin-top: 3rem;
+}
+
+.sources-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.sources-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.source-item {
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.source-item strong {
+    margin-right: 0.5rem;
+}
+
+.source-item em {
+    font-style: italic;
+}
 /* ============================================
    PÉRIODE 1: 1945-1960 - GUERRE ET PARTITION
    Style militaire, documents officiels, carte coupée
@@ -195,6 +223,74 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* Effet hover sur le bouton Jeju */
+.btn-jeju:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+}
+
+/* Bouton bibliographie */
+.btn-biblio:hover {
+    background: #e74c3c;
+    color: #fff;
+}
+
+/* Style pour les liens de citation */
+.period1 sup a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.period1 sup a:hover {
+    text-decoration: underline;
+}
+
+/* Style pour les h3 dans period-card */
+.period1 .period-card h3 {
+    color: #e74c3c;
+    font-size: 1.5rem;
+    font-family: 'Courier New', monospace;
+    margin-top: 1.5rem;
+}
+
+/* Style pour les h4 dans period-card */
+.period1 .period-card h4 {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    font-family: 'Courier New', monospace;
+}
+.btn-jeju {
+    display: inline-block;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.period1 .sources-section {
+    background: rgba(231, 76, 60, 0.05);
+    border: 2px solid #e74c3c;
+}
+
+.period1 .source-item {
+    background: rgba(0,0,0,0.2);
+    border-left-color: #e74c3c;
+}
+
+.period1 .source-item strong {
+    color: #e74c3c;
+}
+
+.period1 .source-item span {
+    color: #ecf0f1;
+}
+
 /* ============================================
    PÉRIODE 2: 1960-1987 - AFFICHES DE PROTESTATION
    Style street art, graffiti, pochoirs, militant
@@ -232,10 +328,7 @@ body {
     z-index: 1;
 }
 
-.period2 > * {
-    position: relative;
-    z-index: 2;
-}
+
 
 .period2 header {
     background: #000;
@@ -404,6 +497,36 @@ body {
 
 .period2 h2::before {
     content: '/// ';
+    color: #fff;
+}
+
+.period2 .btn-prev:hover {
+    background: #fff;
+    color: #000;
+    transform: translateX(-5px) rotate(-2deg);
+}
+
+.period2 .btn-next:hover {
+    background: #c0392b;
+    transform: translateX(5px) rotate(2deg);
+    box-shadow: 8px 8px 0px #000;
+}
+
+.period2 .sources-section {
+    background: rgba(255, 59, 48, 0.05);
+    border: 4px solid #ff3b30;
+}
+
+.period2 .source-item {
+    background: rgba(0,0,0,0.4);
+    border-left-color: #ff3b30;
+}
+
+.period2 .source-item strong {
+    color: #ff3b30;
+}
+
+.period2 .source-item span {
     color: #fff;
 }
 
@@ -617,406 +740,625 @@ body {
     color: #003478;
 }
 
+.period3 .sources-section {
+    background: #f5f5f5;
+    border: 4px solid #003478;
+}
+
+.period3 .source-item {
+    background: #fff;
+    border-left-color: #cd202c;
+}
+
+.period3 .source-item strong {
+    color: #cd202c;
+}
+
+.period3 .source-item span {
+    color: #1a1a1a;
+}
 /* ============================================
-   PÉRIODE 4: 2000-2020 - SEOUL BY NIGHT
-   Style néons, gratte-ciels, écrans LED, futuriste
+   PÉRIODE 4: 2000-2020 - VEILLEURS AUX CHANDELLES
+   Style sobre, tons chauds, lumière des bougies
    ============================================ */
 .period4 {
-    background: 
-        linear-gradient(180deg, #0a0a1f 0%, #1a0a2e 50%, #0a0a1f 100%);
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    position: relative;
-    overflow-x: hidden;
-}
-
-.period4::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        repeating-linear-gradient(
-            0deg,
-            transparent 0px,
-            transparent 100px,
-            rgba(255, 0, 150, 0.03) 100px,
-            rgba(255, 0, 150, 0.03) 101px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            transparent 0px,
-            transparent 100px,
-            rgba(0, 255, 255, 0.03) 100px,
-            rgba(0, 255, 255, 0.03) 101px
-        );
-    pointer-events: none;
-    z-index: 1;
-}
-
-.period4 > * {
-    position: relative;
-    z-index: 2;
+    background: linear-gradient(180deg, #1a1a2e 0%, #2d1f3d 50%, #1a1a2e 100%);
+    color: #f5f5f5;
+    font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 .period4 header {
-    background: 
-        linear-gradient(180deg, rgba(10, 10, 31, 0.95) 0%, rgba(26, 10, 46, 0.95) 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d1f3d 100%);
     padding: 3rem 0;
-    position: relative;
-    border-bottom: 2px solid #ff0096;
-    box-shadow: 
-        0 0 50px rgba(255, 0, 150, 0.5),
-        0 0 100px rgba(0, 255, 255, 0.3),
-        0 10px 40px rgba(0,0,0,0.8);
-    overflow: hidden;
-}
-
-.period4 header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255, 0, 150, 0.1) 25%,
-        rgba(0, 255, 255, 0.1) 50%,
-        rgba(255, 0, 150, 0.1) 75%,
-        transparent 100%
-    );
-    animation: neonSweep 4s ease-in-out infinite;
-}
-
-@keyframes neonSweep {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(50%); }
+    border-bottom: 4px solid #f39c12;
+    box-shadow: 0 5px 30px rgba(243, 156, 18, 0.3);
 }
 
 .period4 header h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 900;
+    font-size: 3rem;
+    font-weight: 700;
     color: #fff;
-    text-transform: uppercase;
-    text-shadow: 
-        0 0 10px #ff0096,
-        0 0 20px #ff0096,
-        0 0 40px #ff0096,
-        0 0 80px #00ffff,
-        4px 4px 0px rgba(0,0,0,0.8);
-    letter-spacing: 5px;
-    position: relative;
-    z-index: 1;
-    animation: textGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes textGlow {
-    0% {
-        text-shadow: 
-            0 0 10px #ff0096,
-            0 0 20px #ff0096,
-            0 0 40px #ff0096,
-            0 0 80px #00ffff,
-            4px 4px 0px rgba(0,0,0,0.8);
-    }
-    100% {
-        text-shadow: 
-            0 0 20px #ff0096,
-            0 0 40px #ff0096,
-            0 0 80px #ff0096,
-            0 0 120px #00ffff,
-            4px 4px 0px rgba(0,0,0,0.8);
-    }
+    text-shadow: 2px 2px 10px rgba(243, 156, 18, 0.5);
+    letter-spacing: 2px;
 }
 
 .period4 header p {
-    color: #00ffff;
-    font-size: 1.3rem;
-    text-shadow: 
-        0 0 10px #00ffff,
-        2px 2px 10px rgba(0,0,0,0.8);
-    position: relative;
-    z-index: 1;
-    font-weight: 700;
+    color: #f39c12;
+    font-size: 1.2rem;
+    font-weight: 600;
     letter-spacing: 3px;
 }
 
 .period4 nav.navbar {
-    background: rgba(10, 10, 31, 0.95) !important;
-    backdrop-filter: blur(20px);
-    box-shadow: 
-        0 0 20px rgba(255, 0, 150, 0.4),
-        0 4px 30px rgba(0,0,0,0.8);
-    padding: 1rem 0;
-    border-bottom: 1px solid #ff0096;
-    border-top: 1px solid #00ffff;
+    background: rgba(26, 26, 46, 0.95) !important;
+    box-shadow: 0 4px 20px rgba(243, 156, 18, 0.2);
+    padding: 0.8rem 0;
+    border-bottom: 2px solid #f39c12;
 }
 
 .period4 .navbar-nav .nav-link {
-    color: #00ffff !important;
-    font-weight: 700;
+    color: #f5f5f5 !important;
+    font-weight: 600;
     padding: 0.6rem 1.5rem !important;
-    margin: 0 0.3rem;
+    margin: 0 0.2rem;
     border: 2px solid transparent;
-    font-family: 'Arial', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px #00ffff;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
 }
 
 .period4 .navbar-nav .nav-link:hover {
-    background: rgba(255, 0, 150, 0.2);
-    border: 2px solid #ff0096;
-    color: #ff0096 !important;
-    box-shadow: 
-        0 0 20px rgba(255, 0, 150, 0.6),
-        inset 0 0 20px rgba(0, 255, 255, 0.2);
-    text-shadow: 0 0 15px #ff0096;
+    background: rgba(243, 156, 18, 0.2);
+    border: 2px solid #f39c12;
+    color: #f39c12 !important;
 }
 
 .period4 footer {
-    background: rgba(10, 10, 31, 0.95);
-    color: #fff;
+    background: rgba(26, 26, 46, 0.95);
+    color: #bdc3c7;
     padding: 2rem 0;
     margin-top: 4rem;
-    border-top: 2px solid #ff0096;
-    box-shadow: 
-        0 0 40px rgba(255, 0, 150, 0.4),
-        0 -10px 30px rgba(0,0,0,0.8);
+    border-top: 4px solid #f39c12;
 }
 
 .period4 .hero-visual {
-    background: rgba(10, 10, 31, 0.8);
-    backdrop-filter: blur(20px);
-    border: 3px solid #ff0096;
-    border-radius: 0;
+    background: rgba(45, 31, 61, 0.8);
+    border: 3px solid #f39c12;
+    border-left: 8px solid #f39c12;
     padding: 3rem;
     margin: 2rem 0;
-    position: relative;
     box-shadow: 
-        0 0 30px rgba(255, 0, 150, 0.6),
-        0 0 60px rgba(0, 255, 255, 0.4),
-        inset 0 0 60px rgba(255, 0, 150, 0.1);
-    animation: cardPulse 3s ease-in-out infinite;
+        0 0 30px rgba(243, 156, 18, 0.2),
+        inset 0 0 50px rgba(243, 156, 18, 0.05);
 }
 
-@keyframes cardPulse {
-    0%, 100% {
-        box-shadow: 
-            0 0 30px rgba(255, 0, 150, 0.6),
-            0 0 60px rgba(0, 255, 255, 0.4),
-            inset 0 0 60px rgba(255, 0, 150, 0.1);
-    }
-    50% {
-        box-shadow: 
-            0 0 50px rgba(255, 0, 150, 0.8),
-            0 0 100px rgba(0, 255, 255, 0.6),
-            inset 0 0 80px rgba(255, 0, 150, 0.2);
-    }
+.period4 .hero-visual h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(243, 156, 18, 0.5);
 }
 
-.period4 .hero-visual::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    right: 30px;
-    width: 100px;
-    height: 100px;
-    background: 
-        linear-gradient(to top, transparent 0%, transparent 70%, #ff0096 70%, #ff0096 75%, transparent 75%),
-        linear-gradient(to top, transparent 0%, transparent 50%, #00ffff 50%, #00ffff 55%, transparent 55%),
-        linear-gradient(to top, transparent 0%, transparent 30%, #ff0096 30%, #ff0096 35%, transparent 35%),
-        linear-gradient(90deg, transparent 10%, #ff0096 10%, #ff0096 15%, transparent 15%, transparent 30%, #00ffff 30%, #00ffff 35%, transparent 35%, transparent 65%, #ff0096 65%, #ff0096 70%, transparent 70%, transparent 85%, #00ffff 85%, #00ffff 90%, transparent 90%);
-    filter: 
-        drop-shadow(0 0 20px #ff0096)
-        drop-shadow(0 0 40px #00ffff);
-}
-
-.period4 .hero-visual::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: 
-        repeating-linear-gradient(
-            90deg,
-            transparent 0px,
-            transparent 20px,
-            rgba(255, 0, 150, 0.3) 20px,
-            rgba(255, 0, 150, 0.3) 21px,
-            transparent 21px,
-            transparent 40px,
-            rgba(0, 255, 255, 0.3) 40px,
-            rgba(0, 255, 255, 0.3) 41px
-        );
-    transform: perspective(500px) rotateX(60deg);
-    transform-origin: bottom;
-    opacity: 0.6;
+.period4 .hero-visual p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #f39c12;
+    margin: 0;
 }
 
 .period4 h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 3rem;
-    font-weight: 900;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #fff;
-    text-transform: uppercase;
-    text-shadow: 
-        0 0 10px #ff0096,
-        0 0 20px #ff0096,
-        0 0 40px #00ffff;
-    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(243, 156, 18, 0.5);
 }
 
 .period4 .period-card {
-    background: rgba(26, 10, 46, 0.7);
-    backdrop-filter: blur(15px);
-    border: 2px solid rgba(255, 0, 150, 0.6);
+    background: rgba(26, 26, 46, 0.9);
+    border: 2px solid rgba(243, 156, 18, 0.3);
+    border-left: 5px solid #f39c12;
     padding: 2rem;
     margin: 2rem 0;
-    box-shadow: 
-        0 0 30px rgba(255, 0, 150, 0.3),
-        0 10px 40px rgba(0,0,0,0.6);
-    position: relative;
-    transition: all 0.4s ease;
-    overflow: hidden;
-}
-
-.period4 .period-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, 
-        transparent 0%,
-        #00ffff 50%,
-        transparent 100%
-    );
-    animation: scanlineCard 2s linear infinite;
-}
-
-@keyframes scanlineCard {
-    0% { transform: translateY(0); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateY(500px); opacity: 0; }
-}
-
-.period4 .period-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 
-        0 0 50px rgba(255, 0, 150, 0.6),
-        0 0 100px rgba(0, 255, 255, 0.4),
-        0 20px 60px rgba(0,0,0,0.8);
-    border-color: #ff0096;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
 
 .period4 h2 {
-    font-family: 'Arial', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: #ff0096;
-    text-shadow: 
-        0 0 15px #ff0096,
-        0 0 30px #00ffff,
-        3px 3px 0px rgba(0,0,0,0.8);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #f39c12;
+    border-bottom: 2px solid rgba(243, 156, 18, 0.3);
+    padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
-/* ============================================
-   PAGE D'ACCUEIL
-   ============================================ */
-.home {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+.period4 h3 {
+    color: #f5f5f5;
+    font-size: 1.5rem;
+    font-family: 'Georgia', serif;
+    margin-bottom: 1rem;
 }
 
-.home header {
-    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95) 0%, rgba(126, 34, 206, 0.95) 100%);
-    padding: 3rem 0;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+.period4 h4 {
+    color: #f39c12;
+    font-size: 1.2rem;
+    font-family: 'Georgia', serif;
+    margin-bottom: 0.5rem;
 }
 
-.home header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(255,255,255,0.05) 10px,
-        rgba(255,255,255,0.05) 20px
-    );
-    animation: slide 20s linear infinite;
+.period4 p {
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
-@keyframes slide {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
+.period4 strong {
+    color: #f39c12;
 }
 
-.home header h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    color: white;
-    text-shadow: 3px 3px 20px rgba(0,0,0,0.3);
-    position: relative;
-    z-index: 1;
+/* Bloc mise en avant */
+.period4 .highlight-box {
+    background: rgba(243, 156, 18, 0.1);
+    border: 2px solid #f39c12;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 0 20px rgba(243, 156, 18, 0.2);
 }
 
-.home header p {
-    color: rgba(255,255,255,0.95);
-    font-size: 1.3rem;
-    position: relative;
-    z-index: 1;
+.period4 .highlight-box h3 {
+    color: #f39c12;
+    margin-top: 0;
 }
 
-.home nav.navbar {
-    background: rgba(0, 0, 0, 0.7) !important;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    padding: 1rem 0;
+.period4 .highlight-box h4 {
+    margin-top: 0;
 }
 
-.home .navbar-nav .nav-link {
-    color: white !important;
-    font-weight: 600;
-    padding: 0.5rem 1.2rem !important;
-    margin: 0 0.3rem;
-    border-radius: 25px;
+/* Bloc sombre */
+.period4 .dark-box {
+    background: rgba(0, 0, 0, 0.5);
+    border-left: 4px solid #f39c12;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Timeline */
+.period4 .timeline-item {
+    padding: 1rem;
+    background: rgba(243, 156, 18, 0.1);
+    border-left: 4px solid #f39c12;
+    margin-bottom: 1rem;
+}
+
+.period4 .timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.period4 .timeline-item strong {
+    color: #f39c12;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.period4 .timeline-item p {
+    color: #f5f5f5;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Sources */
+.period4 .sources-section {
+    background: rgba(243, 156, 18, 0.05);
+    border: 2px solid #f39c12;
+}
+
+.period4 .source-item {
+    background: rgba(0,0,0,0.3);
+    border-left-color: #f39c12;
+}
+
+.period4 .source-item strong {
+    color: #f39c12;
+}
+
+.period4 .source-item span {
+    color: #f5f5f5;
+}
+
+.period4 .btn-biblio {
+    border: 2px solid #f39c12;
+    color: #f39c12;
+}
+
+
+.period4 .btn-biblio:hover {
+    background: #f39c12;
+    color: #1a1a2e;
+}
+
+/* Navigation */
+.period4 .period-navigation {
+    background: rgba(45, 31, 61, 0.8);
+    border: 2px solid #f39c12;
+}
+
+.period4 .period-navigation h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.period4 .btn-nav-prev {
+    border: 2px solid #bdc3c7;
+    color: #bdc3c7;
+    background: transparent;
+}
+
+.period4 .btn-nav-prev:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: #f5f5f5;
+    color: #f5f5f5;
+}
+
+.period4 .btn-nav-next {
+    background: #f39c12;
+    color: #1a1a2e;
+    border: none;
+    font-weight: bold;
+}
+
+.period4 .btn-nav-next:hover {
+    background: #e67e22;
+}
+
+/* Liens citations */
+.period4 .citation-link {
+    color: #f39c12;
+}
+
+.period4 .nav-home {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.period4 .nav-home:hover {
+    color: #f39c12;
+}
+
+/* ========== BOUTON BIBLIOGRAPHIE (toutes périodes) ========== */
+.btn-biblio {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
+.period1 .btn-biblio {
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+}
+
+.period1 .btn-biblio:hover {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.period2 .btn-biblio {
+    border: 3px solid #ff3b30;
+    color: #ff3b30;
+}
+
+.period2 .btn-biblio:hover {
+    background: #ff3b30;
+    color: #fff;
+}
+
+.period3 .btn-biblio {
+    border: 3px solid #003478;
+    color: #003478;
+}
+
+.period3 .btn-biblio:hover {
+    background: #003478;
+    color: #fff;
+}
+
+
+/* ========== NAVIGATION ENTRE PÉRIODES ========== */
+.period-navigation {
+    margin-top: 3rem;
+}
+
+.period-navigation h2 {
+    margin-bottom: 1.5rem;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-nav-prev {
+    background: transparent;
+}
+
+.btn-nav-next {
+    background: transparent;
+}
+
+/* Period 1 navigation */
+.period1 .period-navigation {
+    background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(52, 73, 94, 0.5));
+    border: 2px solid #e74c3c;
+}
+
+.period1 .btn-nav-prev {
+    border: 2px solid #bdc3c7;
+    color: #bdc3c7;
+}
+
+.period1 .btn-nav-next {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.period1 .btn-nav-next:hover {
+    transform: translateX(5px);
+}
+
+/* Period 2 navigation */
+.period2 .period-navigation {
+    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(30, 30, 30, 0.7));
+    border: 4px solid #ff3b30;
+}
+
+.period2 .btn-nav-prev {
+    border: 3px solid #fff;
+    color: #fff;
+    box-shadow: 4px 4px 0px #ff3b30;
+}
+
+.period2 .btn-nav-next {
+    background: #ff3b30;
+    border: 3px solid #000;
+    color: #fff;
+    box-shadow: 4px 4px 0px #000;
+}
+
+/* Period 3 navigation */
+.period3 .period-navigation {
+    background: linear-gradient(135deg, #003478 0%, #cd202c 100%);
+    border: 4px solid #000;
+}
+
+.period3 .period-navigation h2 {
+    color: #fff;
+}
+
+.period3 .btn-nav-prev {
+    background: #fff;
+    border: 3px solid #000;
+    color: #003478;
+    box-shadow: 4px 4px 0px #000;
+}
+
+.period3 .btn-nav-next {
+    background: #fff;
+    border: 3px solid #000;
+    color: #cd202c;
+    box-shadow: 4px 4px 0px #000;
+}
+
+.period3 .nav-home {
+    color: #fff;
+}
+
+/* ========== LIENS CITATIONS ========== */
+.citation-link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.period1 .citation-link {
+    color: #e74c3c;
+}
+
+.period2 .citation-link {
+    color: #ff3b30;
+}
+
+.period3 .citation-link {
+    color: #cd202c;
+}
+
+
+
+.home {
+    background: 
+        linear-gradient(rgba(244, 241, 234, 0.95), rgba(244, 241, 234, 0.95)),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 50px,
+            rgba(139, 69, 19, 0.03) 50px,
+            rgba(139, 69, 19, 0.03) 51px
+        );
+    color: #2c2c2c;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.home header {
+    background: 
+        linear-gradient(rgba(44, 44, 44, 0.92), rgba(44, 44, 44, 0.92));
+    padding: 2rem 0;
+    border-bottom: 4px solid #8b4513;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+}
+
+.home header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f4f1ea;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
+.home header p {
+    color: rgba(244, 241, 234, 0.8);
+    font-size: 1.1rem;
+}
+
+.home nav.navbar {
+    background: #2c2c2c !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    padding: 0.8rem 0;
+    border-bottom: 2px solid #8b4513;
+}
+
+.home .navbar-nav .nav-link {
+    color: #f4f1ea !important;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem !important;
+    margin: 0 0.2rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+}
+
 .home .navbar-nav .nav-link:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: white !important;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    background: rgba(139, 69, 19, 0.4);
+    color: #fff !important;
 }
 
 .home footer {
-    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95) 0%, rgba(126, 34, 206, 0.95) 100%);
-    color: white;
+    background: #2c2c2c;
+    color: #bdb5a8;
     padding: 2rem 0;
     margin-top: 4rem;
+    border-top: 4px solid #8b4513;
 }
 
-/* PREVIEWS PAGE D'ACCUEIL */
+/* Section titre principal */
+.home .hero-section {
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+    margin-bottom: 2rem;
+}
+
+.home .hero-section h2 {
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.home .hero-section .lead {
+    color: #4a4a4a;
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* Section introduction */
+.home .introduction {
+    background: #fff;
+    border: 1px solid #d4c9b8;
+    border-left: 5px solid #8b4513;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 
+        0 2px 10px rgba(0,0,0,0.08),
+        inset 0 0 50px rgba(139, 69, 19, 0.03);
+    position: relative;
+}
+
+.home .introduction::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, transparent 50%, rgba(139, 69, 19, 0.05) 50%);
+}
+
+.home .introduction h3 {
+    color: #8b4513;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(139, 69, 19, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+.home .introduction p {
+    color: #3a3a3a;
+    line-height: 1.9;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.home .introduction p:last-child {
+    margin-bottom: 0;
+}
+
+/* Titre section périodes */
+.home .periods-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.home .periods-title h3 {
+    color: #2c2c2c;
+    font-size: 1.6rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+.home .periods-title h3::before,
+.home .periods-title h3::after {
+    content: '—';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8b4513;
+}
+
+.home .periods-title h3::before {
+    left: 0;
+}
+
+.home .periods-title h3::after {
+    right: 0;
+}
+
+/* PREVIEWS DES PÉRIODES */
 .period-link {
     text-decoration: none;
     color: inherit;
@@ -1025,132 +1367,169 @@ body {
 
 .period-preview {
     padding: 2rem;
-    border-radius: 15px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 5px;
+    transition: all 0.3s ease;
     height: 100%;
     position: relative;
     overflow: hidden;
 }
 
 .period-preview:hover {
-    transform: scale(1.03) translateY(-5px);
+    transform: translateY(-8px);
 }
 
+/* Période 1 */
 .period-preview.period1 {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    border: 3px solid #e74c3c;
-    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+    border: 2px solid #e74c3c;
+    border-left: 5px solid #e74c3c;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
 .period-preview.period1:hover {
-    box-shadow: 0 15px 50px rgba(231, 76, 60, 0.5);
+    box-shadow: 0 10px 40px rgba(231, 76, 60, 0.3);
+    border-color: #c0392b;
 }
 
 .period-preview.period1 h3 {
     font-family: 'Courier New', monospace;
+    font-size: 1.8rem;
     color: #e74c3c;
+    margin-bottom: 0.5rem;
 }
 
 .period-preview.period1 h4 {
     font-family: 'Courier New', monospace;
+    font-size: 1.3rem;
     color: #ecf0f1;
+    margin-bottom: 1rem;
 }
 
 .period-preview.period1 p {
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: #bdc3c7;
 }
 
+/* Période 2 */
 .period-preview.period2 {
     background: #1a1a1a;
-    border: 5px solid #fff;
-    box-shadow: 
-        8px 8px 0px #dc143c,
-        16px 16px 0px rgba(0,0,0,0.5);
+    border: 3px solid #dc143c;
+    box-shadow: 5px 5px 0px #dc143c;
 }
 
 .period-preview.period2:hover {
-    box-shadow: 
-        12px 12px 0px #dc143c,
-        24px 24px 0px rgba(0,0,0,0.7);
+    box-shadow: 8px 8px 0px #dc143c;
 }
 
 .period-preview.period2 h3 {
     font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 1.8rem;
     color: #dc143c;
-    text-shadow: 3px 3px 0px #000;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 0px #000;
 }
 
 .period-preview.period2 h4 {
     font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 1.3rem;
     color: #fff;
-    text-shadow: 2px 2px 0px #000;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 0px #000;
 }
 
 .period-preview.period2 p {
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: #ddd;
 }
 
+/* Période 3 */
 .period-preview.period3 {
     background: linear-gradient(135deg, #003478 0%, #cd202c 100%);
-    border: 6px solid #000;
-    box-shadow: 
-        10px 10px 0px #fff,
-        20px 20px 0px rgba(0,0,0,0.5);
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
 }
 
 .period-preview.period3:hover {
-    box-shadow: 
-        15px 15px 0px #fff,
-        30px 30px 0px rgba(0,0,0,0.7);
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.4);
 }
 
 .period-preview.period3 h3 {
     font-family: 'Arial Black', sans-serif;
+    font-size: 1.8rem;
     color: #fff;
-    text-shadow: 3px 3px 0px #000;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 0px #000;
 }
 
 .period-preview.period3 h4 {
     font-family: 'Arial Black', sans-serif;
+    font-size: 1.3rem;
     color: #fff;
+    margin-bottom: 1rem;
 }
 
 .period-preview.period3 p {
-    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.95);
 }
 
+/* Période 4 */
 .period-preview.period4 {
-    background: linear-gradient(180deg, #0a0a1f 0%, #1a0a2e 100%);
-    border: 3px solid #ff0096;
-    box-shadow: 
-        0 0 30px rgba(255, 0, 150, 0.6),
-        0 0 60px rgba(0, 255, 255, 0.4),
-        0 10px 40px rgba(0,0,0,0.8);
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d1f3d 100%);
+    border: 2px solid #f39c12;
+    border-left: 5px solid #f39c12;
+    box-shadow: 0 5px 20px rgba(243, 156, 18, 0.15);
 }
 
 .period-preview.period4:hover {
-    box-shadow: 
-        0 0 50px rgba(255, 0, 150, 0.8),
-        0 0 100px rgba(0, 255, 255, 0.6),
-        0 15px 60px rgba(0,0,0,1);
+    box-shadow: 0 10px 40px rgba(243, 156, 18, 0.3);
+    border-color: #e67e22;
 }
 
 .period-preview.period4 h3 {
-    font-family: 'Arial', sans-serif;
-    color: #ff0096;
-    text-shadow: 
-        0 0 15px #ff0096,
-        0 0 30px #00ffff;
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    color: #f39c12;
+    margin-bottom: 0.5rem;
 }
 
 .period-preview.period4 h4 {
-    font-family: 'Arial', sans-serif;
-    color: #00ffff;
-    text-shadow: 0 0 10px #00ffff;
+    font-family: 'Georgia', serif;
+    font-size: 1.3rem;
+    color: #f5f5f5;
+    margin-bottom: 1rem;
 }
 
 .period-preview.period4 p {
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+}
+
+/* Lien conclusion */
+.home .conclusion-link {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.home .conclusion-link a {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #2c2c2c;
+    border: 2px solid #8b4513;
+    color: #f4f1ea;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+.home .conclusion-link a:hover {
+    background: #8b4513;
+    color: #fff;
 }
 
 /* Responsive */
@@ -1170,4 +1549,10 @@ body {
     .period2 header h1, .period4 header h1 {
         font-size: 2.5rem;
     }
+}
+
+.home .conclusion-link a:hover {
+    background: #8b4513;
+    color: #fff;
+    border-color: #8b4513;
 }
