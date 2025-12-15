@@ -1556,3 +1556,1293 @@ body {
     color: #fff;
     border-color: #8b4513;
 }
+
+
+/* ============================================
+   PAGE JEJU - STYLES SPÉCIFIQUES
+   ============================================ */
+
+/* Lien retour */
+.home .back-link {
+    display: inline-block;
+    color: #8b4513;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.home .back-link:hover {
+    border-bottom-color: #8b4513;
+}
+
+/* Problématique */
+.home .problematique {
+    background: #fff;
+    border-left: 5px solid #2c2c2c;
+    font-style: italic;
+}
+
+.home .problematique h3 {
+    font-style: normal;
+    color: #2c2c2c;
+}
+
+/* Cartes personnages */
+.home .personnage-card {
+    background: #fff;
+    border-left: 4px solid #8b4513;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.home .personnage-card h4 {
+    color: #8b4513;
+    font-size: 1.2rem;
+    margin: 0 0 0.8rem 0;
+    font-weight: 700;
+}
+
+.home .personnage-card p {
+    margin: 0;
+    text-align: justify;
+}
+
+/* Section image */
+.home .image-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.home .image-section figure {
+    margin: 0;
+    display: inline-block;
+}
+
+.home .image-section img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    border: 3px solid #d4c9b8;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.home .image-section figcaption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #5a5a5a;
+    font-size: 0.95rem;
+}
+
+/* Citations du livre */
+.home .citation-bloc {
+    background: #fff;
+    border-left: 4px solid #8b4513;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.home .citation-bloc.important {
+    border-left-width: 6px;
+    background: linear-gradient(to right, rgba(139, 69, 19, 0.05), #fff);
+}
+
+.home .citation-bloc p {
+    font-style: italic;
+    margin: 0;
+    color: #3a3a3a;
+    line-height: 1.8;
+}
+
+.home .citation-bloc .citation-source {
+    display: block;
+    margin-top: 0.8rem;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #8b4513;
+    font-weight: 600;
+}
+
+/* Sous-titres dans sections */
+.home .introduction h4 {
+    color: #8b4513;
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+/* Chronologie */
+.home .chronologie {
+    background: #fff;
+    border: 1px solid #d4c9b8;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.home .chrono-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.home .chrono-item:last-child {
+    border-bottom: none;
+}
+
+.home .chrono-date {
+    font-weight: 700;
+    color: #8b4513;
+    min-width: 60px;
+    font-size: 1.1rem;
+}
+
+.home .chrono-event {
+    color: #3a3a3a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home .personnage-card {
+        padding: 1rem;
+    }
+    
+    .home .citation-bloc {
+        padding: 1rem;
+    }
+    
+    .home .chrono-item {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
+
+
+/* ============================================
+   PAGE JEJU - STYLE NEIGE ET MÉMOIRE
+   Fond gris neige, accents rouge sang, effet flocons
+   ============================================ */
+
+.jeju {
+    background: linear-gradient(180deg, #f5f5f5 0%, #e8e8e8 50%, #f0f0f0 100%);
+    color: #1a1a1a;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    position: relative;
+}
+
+/* Effet neige animé en arrière-plan */
+.jeju::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.9), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 160px 120px, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1.5px 1.5px at 200px 50px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(2px 2px at 250px 100px, rgba(255,255,255,0.5), transparent);
+    background-size: 300px 300px;
+    animation: snowfall 25s linear infinite;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+@keyframes snowfall {
+    0% { background-position: 0 0; }
+    100% { background-position: 300px 600px; }
+}
+
+/* Header Jeju */
+.jeju header {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    padding: 2rem 0;
+    border-bottom: 4px solid #8b0000;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+.jeju header h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #f5f5f5;
+    letter-spacing: 2px;
+}
+
+.jeju header p {
+    color: rgba(245, 245, 245, 0.7);
+    font-size: 1rem;
+}
+
+/* Navbar Jeju */
+.jeju nav.navbar {
+    background: #1a1a1a !important;
+    box-shadow: 0 4px 20px rgba(139, 0, 0, 0.2);
+    padding: 0.8rem 0;
+    border-bottom: 2px solid #8b0000;
+}
+
+.jeju .navbar-nav .nav-link {
+    color: #f5f5f5 !important;
+    font-weight: 400;
+    padding: 0.5rem 1.2rem !important;
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.jeju .navbar-nav .nav-link:hover {
+    background: rgba(139, 0, 0, 0.3);
+    border-color: #8b0000;
+    color: #fff !important;
+}
+
+/* Footer Jeju */
+.jeju footer {
+    background: #1a1a1a;
+    color: #a0a0a0;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 4px solid #8b0000;
+}
+
+/* Container principal */
+.jeju .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Lien retour */
+.jeju .back-link {
+    display: inline-block;
+    color: #8b0000;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.jeju .back-link:hover {
+    border-bottom-color: #8b0000;
+}
+
+/* Section héro */
+.jeju .hero-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #8b0000;
+}
+
+.jeju .hero-section h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.jeju .hero-section .lead {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #4a4a4a;
+    margin-top: 1rem;
+}
+
+/* Sections générales */
+.jeju .section-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid #d0d0d0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.jeju .section-card h3 {
+    font-size: 1.6rem;
+    color: #8b0000;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: 400;
+}
+
+.jeju .section-card h4 {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin: 2rem 0 1rem 0;
+    font-weight: 700;
+}
+
+.jeju .section-card p {
+    text-align: justify;
+    margin-bottom: 1.2rem;
+    color: #2a2a2a;
+}
+
+/* Section Problématique - fond noir */
+.jeju .problematique {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    border-left: 4px solid #8b0000;
+}
+
+.jeju .problematique h3 {
+    color: #f5f5f5;
+    border-bottom-color: #8b0000;
+}
+
+.jeju .problematique p {
+    color: #e0e0e0;
+}
+
+.jeju .problematique em {
+    color: #d0d0d0;
+}
+
+/* Section Conclusion - fond noir */
+.jeju .section-conclusion {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    border-left: 4px solid #8b0000;
+}
+
+.jeju .section-conclusion h3 {
+    color: #f5f5f5;
+    border-bottom-color: #8b0000;
+}
+
+.jeju .section-conclusion p {
+    color: #e0e0e0;
+}
+
+.jeju .section-conclusion em {
+    color: #d0d0d0;
+}
+
+.jeju .conclusion-finale {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #8b0000;
+}
+
+/* Citations avec guillemets décoratifs */
+.jeju .citation-bloc {
+    position: relative;
+    margin: 1.5rem 0;
+    padding: 1.2rem 1.5rem 1.2rem 3rem;
+    background: rgba(139, 0, 0, 0.03);
+    border-left: 2px solid #8b0000;
+    font-style: italic;
+    color: #4a4a4a;
+    font-size: 0.95rem;
+}
+
+.jeju .citation-bloc::before {
+    content: '«';
+    position: absolute;
+    left: 0.8rem;
+    top: 0.5rem;
+    font-size: 2rem;
+    color: #8b0000;
+    opacity: 0.4;
+    font-style: normal;
+    font-family: 'Georgia', serif;
+}
+
+.jeju .citation-bloc p {
+    margin: 0;
+    font-style: italic;
+    text-align: left;
+}
+
+.jeju .citation-source {
+    display: block;
+    text-align: right;
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 0.8rem;
+    font-style: normal;
+}
+
+/* Citation importante */
+.jeju .citation-bloc.important {
+    background: rgba(139, 0, 0, 0.06);
+    border-left-width: 3px;
+}
+
+/* Informations livre */
+.jeju .livre-info {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.jeju .livre-cover {
+    text-align: center;
+}
+
+.jeju .livre-cover img {
+    width: 100%;
+    max-width: 180px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 1px solid #d0d0d0;
+}
+
+.jeju .livre-cover figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.jeju .livre-details h3 {
+    margin-top: 0;
+}
+
+.jeju .livre-details p {
+    line-height: 2;
+}
+
+.jeju .livre-details strong {
+    color: #8b0000;
+}
+
+.jeju .livre-autrice {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #e8e8e8;
+    border-left: 3px solid #8b0000;
+}
+
+.jeju .livre-autrice h4 {
+    color: #8b0000;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.jeju .livre-autrice p {
+    margin: 0;
+}
+
+/* Personnages */
+.jeju .personnage-card {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-left: 3px solid #8b0000;
+}
+
+.jeju .personnage-card:last-of-type {
+    margin-bottom: 0;
+}
+
+.jeju .personnage-card h4 {
+    color: #8b0000;
+    font-size: 1.1rem;
+    margin: 0 0 0.8rem 0;
+    font-weight: 700;
+}
+
+.jeju .personnage-card p {
+    margin: 0;
+}
+
+/* Note en italique */
+.jeju .note {
+    font-style: italic;
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+}
+
+/* Chronologie avec dates en rouge */
+.jeju .chronologie {
+    margin: 2rem 0;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+}
+
+.jeju .chrono-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #d0d0d0;
+}
+
+.jeju .chrono-item:last-child {
+    margin-bottom: 0;
+}
+
+.jeju .chrono-date {
+    font-weight: 700;
+    color: #8b0000;
+    min-width: 60px;
+    font-size: 1rem;
+}
+
+.jeju .chrono-event {
+    color: #4a4a4a;
+    flex: 1;
+}
+
+/* Images */
+.jeju .image-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.jeju .image-container img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border: 1px solid #d0d0d0;
+}
+
+.jeju .image-container figcaption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Navigation bas de page */
+.jeju .navigation-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #8b0000;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.jeju .btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    color: #8b0000;
+    border: 1px solid #8b0000;
+    background: transparent;
+    font-family: 'Georgia', serif;
+    transition: all 0.3s ease;
+}
+
+.jeju .btn-nav:hover {
+    background: #8b0000;
+    color: #f5f5f5;
+}
+
+.jeju .btn-nav-home {
+    border-color: #4a4a4a;
+    color: #4a4a4a;
+}
+
+.jeju .btn-nav-home:hover {
+    background: #4a4a4a;
+    color: #f5f5f5;
+}
+
+/* Strong dans le texte */
+.jeju strong {
+    color: #1a1a1a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .jeju .hero-section h2 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .jeju .section-card {
+        padding: 1.5rem;
+    }
+    
+    .jeju .livre-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .jeju .livre-cover {
+        margin-bottom: 1.5rem;
+    }
+    
+    .jeju .livre-cover img {
+        max-width: 150px;
+    }
+    
+    .jeju .citation-bloc {
+        padding-left: 2.5rem;
+    }
+    
+    .jeju .navigation-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .jeju .btn-nav {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* ============================================
+   PAGE JEJU - STYLE NEIGE ET MÉMOIRE
+   ============================================ */
+
+/* Base - forcer sur tout le body */
+body.jeju {
+    background: linear-gradient(180deg, #f5f5f5 0%, #e8e8e8 50%, #f0f0f0 100%) !important;
+    color: #1a1a1a;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    position: relative;
+}
+
+/* Effet neige */
+body.jeju::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.9), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 160px 120px, rgba(255,255,255,0.7), transparent);
+    background-size: 300px 300px;
+    animation: snowfall-jeju 25s linear infinite;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+@keyframes snowfall-jeju {
+    0% { background-position: 0 0; }
+    100% { background-position: 300px 600px; }
+}
+
+/* Header */
+body.jeju header {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%) !important;
+    padding: 2rem 0;
+    border-bottom: 4px solid #8b0000;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+body.jeju header h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #f5f5f5;
+    letter-spacing: 2px;
+}
+
+body.jeju header p {
+    color: rgba(245, 245, 245, 0.7);
+}
+
+/* Navbar */
+body.jeju nav.navbar {
+    background: #1a1a1a !important;
+    border-bottom: 2px solid #8b0000;
+}
+
+body.jeju .navbar-nav .nav-link {
+    color: #f5f5f5 !important;
+}
+
+body.jeju .navbar-nav .nav-link:hover {
+    background: rgba(139, 0, 0, 0.3) !important;
+    color: #fff !important;
+}
+
+/* Footer */
+body.jeju footer {
+    background: #1a1a1a !important;
+    color: #a0a0a0;
+    border-top: 4px solid #8b0000;
+}
+
+/* Container */
+body.jeju .container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Lien retour */
+body.jeju .back-link {
+    display: inline-block;
+    color: #8b0000 !important;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+body.jeju .back-link:hover {
+    text-decoration: underline;
+}
+
+/* Hero section */
+body.jeju .hero-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #8b0000;
+    background: transparent !important;
+}
+
+body.jeju .hero-section h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a !important;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+body.jeju .hero-section .lead {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #4a4a4a !important;
+}
+
+/* ========== TOUTES LES SECTIONS ========== */
+body.jeju .section-card {
+    background: 
+        linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%),
+        repeating-linear-gradient(
+            60deg,
+            transparent,
+            transparent 10px,
+            rgba(255,255,255,0.1) 10px,
+            rgba(255,255,255,0.1) 11px
+        ),
+        repeating-linear-gradient(
+            -60deg,
+            transparent,
+            transparent 10px,
+            rgba(255,255,255,0.1) 10px,
+            rgba(255,255,255,0.1) 11px
+        ) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+body.jeju .section-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+body.jeju .section-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 80px;
+    background: radial-gradient(
+        ellipse at bottom left,
+        rgba(255, 255, 255, 0.3) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+/* Important : pour que les pseudo-éléments fonctionnent */
+body.jeju .section-card {
+    position: relative;
+    overflow: hidden;
+}
+
+body.jeju .section-card h3 {
+    font-size: 1.6rem !important;
+    color: #8b0000 !important;
+    margin-bottom: 1.5rem !important;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: 400 !important;
+    font-family: 'Georgia', serif !important;
+}
+
+body.jeju .section-card h4 {
+    font-size: 1.2rem !important;
+    color: #1a1a1a !important;
+    margin: 2rem 0 1rem 0 !important;
+    font-weight: 700 !important;
+    font-family: 'Georgia', serif !important;
+}
+
+body.jeju .section-card p {
+    text-align: justify;
+    margin-bottom: 1.2rem;
+    color: #2a2a2a !important;
+    font-family: 'Georgia', serif;
+}
+
+/* ========== PROBLÉMATIQUE - FOND NOIR ========== */
+body.jeju .section-card.problematique {
+    background: #1a1a1a !important;
+    border-left: 4px solid #8b0000 !important;
+}
+
+body.jeju .section-card.problematique h3 {
+    color: #f5f5f5 !important;
+    border-bottom-color: #8b0000 !important;
+}
+
+body.jeju .section-card.problematique p {
+    color: #e0e0e0 !important;
+}
+
+body.jeju .section-card.problematique em {
+    color: #c0c0c0;
+}
+
+/* ========== CONCLUSION - FOND NOIR ========== */
+body.jeju .section-card.section-conclusion {
+    background: #1a1a1a !important;
+    border-left: 4px solid #8b0000 !important;
+}
+
+body.jeju .section-card.section-conclusion h3 {
+    color: #f5f5f5 !important;
+    border-bottom-color: #8b0000 !important;
+}
+
+body.jeju .section-card.section-conclusion p {
+    color: #e0e0e0 !important;
+}
+
+body.jeju .section-card.section-conclusion em {
+    color: #c0c0c0;
+}
+
+body.jeju .conclusion-finale {
+    font-size: 1.1rem !important;
+    font-style: italic;
+    margin-top: 2rem !important;
+    padding-top: 1.5rem;
+    border-top: 1px solid #8b0000;
+}
+
+/* ========== CITATIONS ========== */
+body.jeju .citation-bloc {
+    position: relative;
+    margin: 1.5rem 0 !important;
+    padding: 1.5rem 1.5rem 1.5rem 3.5rem !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    border: none !important;
+    border-left: 3px solid #8b0000 !important;
+    font-style: italic;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+}
+
+body.jeju .citation-bloc::before {
+    content: '«';
+    position: absolute;
+    left: 0.8rem;
+    top: 0.8rem;
+    font-size: 2.5rem;
+    color: #8b0000;
+    opacity: 0.35;
+    font-style: normal;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+}
+
+body.jeju .citation-bloc p {
+    margin: 0 !important;
+    font-style: italic;
+    text-align: left !important;
+    color: #3a3a3a !important;
+    font-size: 0.98rem;
+}
+
+body.jeju .citation-bloc .citation-source {
+    display: block;
+    text-align: right;
+    font-size: 0.85rem;
+    color: #8b0000 !important;
+    margin-top: 1rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+body.jeju .citation-bloc.important {
+    background: rgba(139, 0, 0, 0.04) !important;
+    border-left-width: 4px !important;
+}
+
+/* ========== LIVRE INFO ========== */
+body.jeju .livre-info {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+body.jeju .livre-cover img {
+    width: 100%;
+    max-width: 180px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 1px solid #d0d0d0;
+}
+
+body.jeju .livre-cover figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: #6c757d !important;
+    font-style: italic;
+}
+
+body.jeju .livre-details strong {
+    color: #8b0000 !important;
+}
+
+body.jeju .livre-autrice {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    background: rgba(139, 0, 0, 0.05) !important;
+    border-left: 3px solid #8b0000;
+}
+
+body.jeju .livre-autrice h4 {
+    color: #8b0000 !important;
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 1.1rem !important;
+}
+
+/* ========== PERSONNAGES ========== */
+body.jeju .personnage-card {
+    margin-bottom: 1.5rem !important;
+    padding: 1.5rem !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    border: none !important;
+    border-left: 3px solid #8b0000 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+}
+
+body.jeju .personnage-card h4 {
+    color: #8b0000 !important;
+    font-size: 1.15rem !important;
+    margin: 0 0 0.8rem 0 !important;
+}
+
+body.jeju .personnage-card p {
+    margin: 0 !important;
+}
+
+/* ========== NOTE ========== */
+body.jeju .note {
+    font-style: italic;
+    color: #6c757d !important;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(0,0,0,0.03);
+    border-left: 2px solid #d0d0d0;
+}
+
+/* ========== CHRONOLOGIE ========== */
+body.jeju .chronologie {
+    margin: 2rem 0;
+    background: rgba(255, 255, 255, 0.85) !important;
+    padding: 1.5rem !important;
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+body.jeju .chrono-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem !important;
+    background: rgba(139, 0, 0, 0.04) !important;
+    border-left: 3px solid #8b0000 !important;
+}
+
+body.jeju .chrono-item:last-child {
+    margin-bottom: 0;
+}
+
+body.jeju .chrono-date {
+    font-weight: 700 !important;
+    color: #8b0000 !important;
+    min-width: 70px;
+    font-size: 1.1rem !important;
+}
+
+body.jeju .chrono-event {
+    color: #3a3a3a !important;
+    flex: 1;
+}
+
+/* ========== IMAGES ========== */
+body.jeju .image-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+body.jeju .image-container img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border: 1px solid #d0d0d0;
+}
+
+body.jeju .image-container figcaption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #6c757d !important;
+    font-style: italic;
+}
+
+/* ========== NAVIGATION ========== */
+body.jeju .navigation-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #8b0000;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+body.jeju .btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    color: #8b0000 !important;
+    border: 2px solid #8b0000 !important;
+    background: transparent !important;
+    font-family: 'Georgia', serif;
+    transition: all 0.3s ease;
+}
+
+body.jeju .btn-nav:hover {
+    background: #8b0000 !important;
+    color: #f5f5f5 !important;
+}
+
+body.jeju .btn-nav-home {
+    border-color: #4a4a4a !important;
+    color: #4a4a4a !important;
+}
+
+body.jeju .btn-nav-home:hover {
+    background: #4a4a4a !important;
+    color: #f5f5f5 !important;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    body.jeju .container {
+        padding: 1rem;
+    }
+    
+    body.jeju .hero-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    body.jeju .section-card {
+        padding: 1.5rem !important;
+    }
+    
+    body.jeju .livre-info {
+        grid-template-columns: 1fr;
+    }
+    
+    body.jeju .citation-bloc {
+        padding-left: 2.5rem !important;
+    }
+    
+    body.jeju .chrono-item {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    body.jeju .navigation-section {
+        flex-direction: column;
+    }
+    
+    body.jeju .btn-nav {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ========== EFFET NEIGE PLUS DENSE ========== */
+body.jeju::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='50' cy='50' r='2' fill='white' fill-opacity='0.8'/%3E%3Ccircle cx='150' cy='100' r='1.5' fill='white' fill-opacity='0.6'/%3E%3Ccircle cx='250' cy='75' r='2' fill='white' fill-opacity='0.7'/%3E%3Ccircle cx='350' cy='150' r='1.5' fill='white' fill-opacity='0.5'/%3E%3Ccircle cx='100' cy='200' r='2' fill='white' fill-opacity='0.8'/%3E%3Ccircle cx='200' cy='250' r='1.5' fill='white' fill-opacity='0.6'/%3E%3Ccircle cx='300' cy='300' r='2' fill='white' fill-opacity='0.7'/%3E%3Ccircle cx='75' cy='350' r='1.5' fill='white' fill-opacity='0.5'/%3E%3Ccircle cx='175' cy='175' r='2' fill='white' fill-opacity='0.8'/%3E%3Ccircle cx='275' cy='225' r='1.5' fill='white' fill-opacity='0.6'/%3E%3Ccircle cx='375' cy='275' r='2' fill='white' fill-opacity='0.7'/%3E%3Ccircle cx='25' cy='125' r='1.5' fill='white' fill-opacity='0.5'/%3E%3Ccircle cx='125' cy='325' r='2' fill='white' fill-opacity='0.8'/%3E%3Ccircle cx='225' cy='375' r='1.5' fill='white' fill-opacity='0.6'/%3E%3Ccircle cx='325' cy='25' r='2' fill='white' fill-opacity='0.7'/%3E%3C/svg%3E");
+    background-size: 400px 400px;
+    animation: snowfall-jeju 20s linear infinite;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+@keyframes snowfall-jeju {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 400px 800px;
+    }
+}
+
+/* ========== FLOCONS DÉCORATIFS DANS LES TITRES ========== */
+body.jeju .hero-section h2::before {
+    content: '❄';
+    margin-right: 1rem;
+    opacity: 0.3;
+    font-size: 1.5rem;
+}
+
+body.jeju .hero-section h2::after {
+    content: '❄';
+    margin-left: 1rem;
+    opacity: 0.3;
+    font-size: 1.5rem;
+}
+
+/* Flocon avant chaque titre de section */
+body.jeju .section-card h3::before {
+    content: '✦ ';
+    color: #8b0000;
+    opacity: 0.5;
+    font-size: 0.8em;
+}
+
+/* Flocons dans la navigation */
+body.jeju .navigation-section::before {
+    content: '❄ ❄ ❄';
+    display: block;
+    text-align: center;
+    color: #8b0000;
+    opacity: 0.3;
+    letter-spacing: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Bordure avec effet givré sur les citations importantes */
+body.jeju .citation-bloc.important {
+    box-shadow: 
+        0 2px 8px rgba(0,0,0,0.06),
+        inset 0 0 20px rgba(255,255,255,0.5);
+}
+
+/* Effet subtil sur le header */
+body.jeju header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1));
+    pointer-events: none;
+}
+
+/* ========== NEIGE SUR LE HEADER ========== */
+body.jeju header::before, body.jeju .section-card.section-conclusion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(2px 2px at 30px 20px, rgba(255,255,255,0.4), transparent),
+        radial-gradient(2px 2px at 80px 50px, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 150px 30px, rgba(255,255,255,0.5), transparent),
+        radial-gradient(2px 2px at 220px 60px, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 300px 40px, rgba(255,255,255,0.4), transparent);
+    background-size: 350px 100px;
+    animation: snowfall-header 10s linear infinite;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+@keyframes snowfall-header {
+    0% { background-position: 0 0; }
+    100% { background-position: 350px 100px; }
+}
+
+body.jeju header h1,
+body.jeju header p {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========== NEIGE SUR LA NAVBAR ========== */
+
+
+body.jeju nav.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(2px 2px at 30px 20px, rgba(255,255,255,0.4), transparent),
+        radial-gradient(2px 2px at 80px 50px, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 150px 30px, rgba(255,255,255,0.5), transparent),
+        radial-gradient(2px 2px at 220px 60px, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 300px 40px, rgba(255,255,255,0.4), transparent);
+    background-size: 350px 100px;
+    animation: snowfall-header 10s linear infinite;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+
+
