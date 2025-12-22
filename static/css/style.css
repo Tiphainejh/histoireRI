@@ -290,6 +290,88 @@ body {
 .period1 .source-item span {
     color: #ecf0f1;
 }
+.period1 .period-image {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.period1 .period-image img {
+    
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border: 3px solid #e74c3c;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+}
+
+.period1 .period-image figcaption {
+    margin-top: 1rem;
+    color: #bdc3c7;
+    font-size: 0.95rem;
+    font-style: italic;
+    font-family: 'Courier New', monospace;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .period1 .period-image {
+        padding: 0.5rem;
+    }
+    
+    .period1 .period-image img {
+        border-width: 2px;
+    }
+} 
+/* ========== IMAGE À GAUCHE + TEXTE À DROITE ========== */
+.period1 .content-with-image {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin: 1.5rem 0;
+}
+
+.period1 .period-image-left {
+    flex: 0 0 380px; /* Largeur fixe de l'image */
+    margin: 0;
+}
+
+.period1 .period-image-left img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #e74c3c;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.3);
+}
+
+.period1 .period-image-left figcaption {
+    margin-top: 0.8rem;
+    color: #bdc3c7;
+    font-size: 0.85rem;
+    font-style: italic;
+    font-family: 'Courier New', monospace;
+    line-height: 1.4;
+}
+
+.period1 .text-beside-image {
+    flex: 1;
+    color: #ecf0f1;
+}
+
+.period1 .text-beside-image p {
+    margin-bottom: 1rem;
+}
+
+/* Responsive : retour à l'affichage vertical sur mobile */
+@media (max-width: 768px) {
+    .period1 .content-with-image {
+        flex-direction: column;
+    }
+    
+    .period1 .period-image-left {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
 
 /* ============================================
    PÉRIODE 2: 1960-1987 - AFFICHES DE PROTESTATION
@@ -757,6 +839,49 @@ body {
 .period3 .source-item span {
     color: #1a1a1a;
 }
+/* Image standard pleine largeur */
+.period3 .period-image {
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.period3 .period-image img {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    border: 8px solid #003478;
+    box-shadow: 
+        10px 10px 0px #cd202c,
+        20px 20px 0px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.period3 .period-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        12px 12px 0px #cd202c,
+        24px 24px 0px rgba(0,0,0,0.25);
+}
+
+.period3 .period-image figcaption {
+    margin-top: 1.5rem;
+    color: #1a1a1a;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Arial Black', sans-serif;
+    line-height: 1.6;
+    padding: 1rem;
+    background: rgba(255, 255, 255);
+    border-left: 4px solid #003478;
+}
+
+.period3 .period-image figcaption strong {
+    color: #cd202c;
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
 /* ============================================
    PÉRIODE 4: 2000-2020 - VEILLEURS AUX CHANDELLES
    Style sobre, tons chauds, lumière des bougies
@@ -1041,6 +1166,167 @@ body {
 .period4 .btn-interview:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 25px rgba(243, 156, 18, 0.5);
+}
+css
+/* ============================================
+   PÉRIODE 4 - IMAGES (VERSION CORRIGÉE)
+   ============================================ */
+
+/* RESET de base pour toutes les images période 4 */
+body.period4 .period-image,
+body.period4 figure.period-image {
+    margin: 2.5rem auto !important;
+    text-align: center;
+    max-width: 100%;
+}
+
+body.period4 .period-image img,
+body.period4 figure.period-image img {
+    width: 100% !important;
+    max-width: 800px !important;
+    height: auto !important;
+    border: 3px solid rgba(243, 156, 18, 0.5) !important;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(243, 156, 18, 0.3) !important;
+    transition: all 0.3s ease;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+body.period4 .period-image img:hover,
+body.period4 figure.period-image img:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.5),
+        0 0 50px rgba(243, 156, 18, 0.4) !important;
+}
+
+body.period4 .period-image figcaption,
+body.period4 figure.period-image figcaption {
+    margin-top: 1.5rem !important;
+    color: #f5f5f5 !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    padding: 1.5rem !important;
+    background: rgba(45, 31, 61, 0.8) !important;
+    border-left: 5px solid #f39c12 !important;
+    text-align: left !important;
+}
+
+body.period4 .period-image figcaption strong,
+body.period4 figure.period-image figcaption strong {
+    display: block !important;
+    font-size: 1.2rem !important;
+    color: #f39c12 !important;
+    margin-bottom: 0.8rem !important;
+    font-weight: 700 !important;
+}
+
+/* ========== IMAGE SPÉCIALE "CHANDELLES" ========== */
+body.period4 .period-image.candles-large,
+body.period4 figure.period-image.candles-large {
+    position: relative;
+    padding: 2rem !important;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(243, 156, 18, 0.15) 0%,
+        transparent 70%
+    ) !important;
+    border: 2px solid rgba(243, 156, 18, 0.2) !important;
+}
+
+body.period4 .period-image.candles-large img,
+body.period4 figure.period-image.candles-large img {
+    border: 4px solid #f39c12 !important;
+    box-shadow: 
+        0 0 40px rgba(243, 156, 18, 0.5),
+        0 10px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 30px rgba(243, 156, 18, 0.1) !important;
+}
+
+
+
+/* ========== LAYOUT CÔTE À CÔTE ========== */
+body.period4 .content-with-image {
+    display: flex !important;
+    gap: 2rem !important;
+    align-items: flex-start !important;
+    margin: 2rem 0 !important;
+}
+
+body.period4 .period-image-left,
+body.period4 figure.period-image-left {
+    flex: 0 0 400px !important;
+    margin: 0 !important;
+}
+
+body.period4 .period-image-left img,
+body.period4 figure.period-image-left img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border: 3px solid rgba(243, 156, 18, 0.5) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.period4 .period-image-left figcaption,
+body.period4 figure.period-image-left figcaption {
+    margin-top: 1rem !important;
+    color: #bdc3c7 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    padding: 0.8rem !important;
+    background: rgba(26, 26, 46, 0.9) !important;
+    border-left: 3px solid #f39c12 !important;
+}
+
+body.period4 .text-beside-image {
+    flex: 1 !important;
+    color: #f5f5f5 !important;
+}
+
+body.period4 .text-beside-image p {
+    margin-bottom: 1rem !important;
+    font-size: 1.05rem !important;
+    line-height: 1.8 !important;
+}
+
+body.period4 .text-beside-image h3 {
+    color: #f39c12 !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    body.period4 .period-image img,
+    body.period4 figure.period-image img {
+        max-width: 100% !important;
+        border-width: 2px !important;
+    }
+
+    body.period4 .content-with-image {
+        flex-direction: column !important;
+    }
+
+    body.period4 .period-image-left,
+    body.period4 figure.period-image-left {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+    }
+
+    body.period4 .period-image.candles-large::before,
+    body.period4 figure.period-image.candles-large::before {
+        font-size: 2.5rem !important;
+        top: -30px !important;
+    }
+
+    body.period4 .period-image figcaption,
+    body.period4 figure.period-image figcaption {
+        padding: 1rem !important;
+        font-size: 0.9rem !important;
+    }
 }
 
 /* ========== BOUTON BIBLIOGRAPHIE (toutes périodes) ========== */
