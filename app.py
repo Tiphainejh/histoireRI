@@ -1,11 +1,3 @@
-
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "Hello from Flask on Vercel!"
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -45,6 +37,9 @@ def jeju():
 @app.route('/conclusion')
 def conclusion():
     return render_template('conclusion.html', title='Conclusion')
+@app.route('/interview')
+def interview():
+    return render_template('interview.html', title='Interview avec Eom Hyunsoo')
 
 if __name__ == '__main__':
     app.run(debug=True)

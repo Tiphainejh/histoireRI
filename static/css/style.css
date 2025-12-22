@@ -535,7 +535,7 @@ body {
    Style affiche vintage coréenne, drapeau taegukgi
    ============================================ */
 .period3 {
-    background: #f5f5f5;
+    background: #fff7fe;
     color: #1a1a1a;
     font-family: 'Arial Black', sans-serif;
 }
@@ -1022,6 +1022,25 @@ body {
 
 .period4 .nav-home:hover {
     color: #f39c12;
+}
+
+
+/* Bouton interview - Period 4 */
+.period4 .btn-interview {
+    display: inline-block;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: #1a1a2e;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+}
+
+.period4 .btn-interview:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(243, 156, 18, 0.5);
 }
 
 /* ========== BOUTON BIBLIOGRAPHIE (toutes périodes) ========== */
@@ -2213,7 +2232,7 @@ body {
 
 /* Base - forcer sur tout le body */
 body.jeju {
-    background: linear-gradient(180deg, #f5f5f5 0%, #e8e8e8 50%, #f0f0f0 100%) !important;
+    background: linear-gradient(180deg, #b7b5b5 0%, #e8e8e8 50%, #f0f0f0 100%) !important;
     color: #1a1a1a;
     font-family: 'Georgia', 'Times New Roman', serif;
     line-height: 1.8;
@@ -2352,21 +2371,7 @@ body.jeju .section-card {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
-body.jeju .section-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.4) 0%,
-        rgba(255, 255, 255, 0.1) 50%,
-        transparent 100%
-    );
-    pointer-events: none;
-}
+
 
 body.jeju .section-card::after {
     content: '';
@@ -2383,7 +2388,6 @@ body.jeju .section-card::after {
     pointer-events: none;
 }
 
-/* Important : pour que les pseudo-éléments fonctionnent */
 body.jeju .section-card {
     position: relative;
     overflow: hidden;
@@ -2735,60 +2739,6 @@ body.jeju::before {
     }
 }
 
-/* ========== FLOCONS DÉCORATIFS DANS LES TITRES ========== */
-body.jeju .hero-section h2::before {
-    content: '❄';
-    margin-right: 1rem;
-    opacity: 0.3;
-    font-size: 1.5rem;
-}
-
-body.jeju .hero-section h2::after {
-    content: '❄';
-    margin-left: 1rem;
-    opacity: 0.3;
-    font-size: 1.5rem;
-}
-
-/* Flocon avant chaque titre de section */
-body.jeju .section-card h3::before {
-    content: '✦ ';
-    color: #8b0000;
-    opacity: 0.5;
-    font-size: 0.8em;
-}
-
-/* Flocons dans la navigation */
-body.jeju .navigation-section::before {
-    content: '❄ ❄ ❄';
-    display: block;
-    text-align: center;
-    color: #8b0000;
-    opacity: 0.3;
-    letter-spacing: 2rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
-}
-
-/* Bordure avec effet givré sur les citations importantes */
-body.jeju .citation-bloc.important {
-    box-shadow: 
-        0 2px 8px rgba(0,0,0,0.06),
-        inset 0 0 20px rgba(255,255,255,0.5);
-}
-
-/* Effet subtil sur le header */
-body.jeju header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1));
-    pointer-events: none;
-}
-
 /* ========== NEIGE SUR LE HEADER ========== */
 body.jeju header::before, body.jeju .section-card.section-conclusion::before {
     content: '';
@@ -2844,5 +2794,375 @@ body.jeju nav.navbar::before {
     z-index: 0;
 }
 
+/* ========== PHOTOS DU LIVRE ========== */
 
+/* Photo unique */
+body.jeju .book-photo {
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+}
 
+body.jeju .book-photo img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #d0d0d0;
+    box-shadow: 
+        0 4px 15px rgba(0,0,0,0.15),
+        0 0 0 1px rgba(255,255,255,0.5) inset;
+    transition: transform 0.3s ease;
+}
+
+body.jeju .book-photo img:hover {
+    transform: scale(1.02);
+}
+
+body.jeju .book-photo figcaption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Grille de photos (si plusieurs) */
+body.jeju .book-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Section spéciale extraits livre */
+body.jeju .extraits-livre {
+    background: rgba(139, 0, 0, 0.03) !important;
+    border-left: 4px solid #8b0000 !important;
+}
+
+body.jeju .extraits-livre h3 {
+    color: #8b0000 !important;
+}
+
+/* Effet "page de livre" (optionnel, plus stylisé) */
+body.jeju .book-photo.page-effect img {
+    box-shadow: 
+        0 1px 2px rgba(0,0,0,0.1),
+        0 4px 8px rgba(0,0,0,0.1),
+        0 8px 16px rgba(0,0,0,0.1),
+        2px 0 8px rgba(0,0,0,0.05);
+    border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body.jeju .book-photo {
+        max-width: 100%;
+    }
+    
+    body.jeju .book-photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ============================================
+   PAGE INTERVIEW – STYLE DOCUMENTAIRE
+   Entre archive orale et témoignage contemporain
+   ============================================ */
+
+body.interview {
+    background: linear-gradient(to bottom, #f5f5f0 0%, #eae8e0 100%);
+    color: #2a2a2a;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+}
+
+/* Header */
+body.interview header {
+    background: #3a3a3a !important;
+    border-bottom: 3px solid #6a6a6a;
+    padding: 2rem 0;
+}
+
+body.interview header h1 {
+    color: #f5f5f0;
+}
+
+body.interview header p {
+    color: #c0c0c0;
+}
+
+/* Navbar */
+body.interview nav.navbar {
+    background: #2a2a2a !important;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+body.interview .navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+}
+
+body.interview .navbar-nav .nav-link:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+body.interview footer {
+    background: #2a2a2a !important;
+    border-top: 3px solid #4a4a4a;
+    color: #a0a0a0;
+}
+
+/* Container */
+body.interview .container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* Lien retour */
+body.interview .back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: #6a4c3a;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+body.interview .back-link:hover {
+    border-bottom-color: #6a4c3a;
+}
+
+/* Hero */
+body.interview .hero-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #d0cdc0;
+}
+
+body.interview .interview-badge {
+    display: inline-block;
+    background: #6a4c3a;
+    color: #f5f5f0;
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+body.interview .hero-section h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 0.8rem;
+    color: #2a2a2a;
+}
+
+body.interview .hero-section .lead {
+    font-style: italic;
+    color: #5a5a5a;
+    font-size: 1.05rem;
+}
+
+/* Sections */
+body.interview .section-card {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid #6a4c3a;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+body.interview .section-card h3 {
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-bottom: 1.2rem;
+    color: #6a4c3a;
+    border-bottom: 1px solid #d0cdc0;
+    padding-bottom: 0.5rem;
+}
+
+body.interview .section-card p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    color: #2a2a2a;
+}
+
+/* Profil */
+body.interview .profil-section {
+    background: rgba(106, 76, 58, 0.05);
+}
+
+body.interview .profil-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+body.interview .profil-item {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.8rem;
+    border-left: 2px solid #6a4c3a;
+    font-size: 0.95rem;
+}
+
+body.interview .profil-label {
+    display: block;
+    font-weight: bold;
+    color: #6a4c3a;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+}
+
+body.interview .profil-value {
+    color: #2a2a2a;
+}
+
+/* Vidéo */
+body.interview .video-section {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+body.interview .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin-top: 1.5rem;
+    background: #1a1a1a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.interview .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body.interview .video-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #6a6a6a;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Citations coréennes */
+body.interview .citation-bloc.korean {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    margin: 1.8rem 0;
+    border-left: 4px solid #6a4c3a;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+body.interview .citation-bloc.korean.important {
+    border-left-width: 6px;
+    background: rgba(106, 76, 58, 0.08);
+}
+
+body.interview .citation-bloc .korean-text {
+    font-size: 0.95rem;
+    color: #6a6a6a;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #d0cdc0;
+    font-style: normal;
+}
+
+body.interview .citation-bloc .french-translation {
+    font-size: 1rem;
+    font-style: italic;
+    color: #2a2a2a;
+    margin: 0;
+}
+
+/* Conclusion */
+body.interview .conclusion-section {
+    background: rgba(106, 76, 58, 0.08);
+    border-left-color: #6a4c3a;
+    border-left-width: 6px;
+}
+
+/* Extraits */
+body.interview .extraits-section {
+    background: rgba(106, 76, 58, 0.05);
+}
+
+body.interview .extraits-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+body.interview .extrait-item {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+    border-left: 3px solid #6a4c3a;
+}
+
+body.interview .extrait-item.highlight {
+    background: rgba(106, 76, 58, 0.1);
+    border-left-width: 4px;
+}
+
+body.interview .extrait-korean {
+    font-size: 0.9rem;
+    color: #6a6a6a;
+    margin-bottom: 0.4rem;
+}
+
+body.interview .extrait-french {
+    font-style: italic;
+    color: #2a2a2a;
+    margin: 0;
+}
+
+/* Navigation */
+body.interview .navigation-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid #d0cdc0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+body.interview .btn-nav {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    color: #6a4c3a;
+    border: 1px solid #6a4c3a;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+}
+
+body.interview .btn-nav:hover {
+    background: #6a4c3a;
+    color: #f5f5f0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body.interview .container {
+        padding: 2rem 1rem;
+    }
+
+    body.interview .section-card {
+        padding: 1.5rem;
+    }
+
+    body.interview .navigation-section {
+        flex-direction: column;
+    }
+
+    body.interview .btn-nav {
+        text-align: center;
+    }
+}
