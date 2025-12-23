@@ -1,189 +1,229 @@
-{% extends "base.html" %}
-
-{% block body_class %}period4{% endblock %}
-
-{% block title %}{{ title }} - États-Unis et Corée du Sud{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block body_class %}period4{% endblock %} {% block
+title %}{{ title }} - États-Unis et Corée du Sud{% endblock %} {% block content
+%}
 <div class="container period4">
-    <div class="hero-visual">
-        <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">{{ title }}</h1>
-        <p style="font-size: 1.3rem; font-weight: 700; letter-spacing: 3px;">
-            OPINION PUBLIQUE • VEILLEURS AUX CHANDELLES • THAAD
+  <div class="hero-visual">
+    <h1 style="font-size: 3rem; margin-bottom: 0.5rem">{{ title }}</h1>
+    <p style="font-size: 1.3rem; font-weight: 700; letter-spacing: 3px">
+      OPINION PUBLIQUE • VEILLEURS AUX CHANDELLES • THAAD
+    </p>
+  </div>
+
+  <section class="period-card">
+    <h2>L'INCIDENT DE YANGJU (2002)</h2>
+    <p>
+      L'entrée dans le nouveau millénaire marque un tournant majeur dans les
+      relations américano-coréennes : pour la première fois, l'opinion publique
+      devient un acteur politique incontournable. Le 13 juin 2002, deux
+      collégiennes, <strong>Shim Mi-seon et Shin Hyo-sun</strong>, sont écrasées
+      par un véhicule blindé américain près de Yangju. L'acquittement des
+      soldats responsables par un tribunal militaire américain déclenche une
+      vague de protestations sans précédent.
+    </p>
+    <figure class="period-image" style="margin: 2.5rem 0">
+      <img
+        src="{{ url_for('static', filename='images/yangju-petition-2002.jpg') }}"
+        alt="Conférence de presse présentant 1 million de signatures réclamant justice pour Shim Mi-seon et Shin Hyo-sun, 2002"
+      />
+      <figcaption>
+        <strong>2002 – Un million de signatures pour réclamer justice</strong>
+        <br />
+        Le "Comité national d'action pour l'incident du char blindé américain
+        ayant tué les collégiennes Shin Hyo-sun et Shim Mi-seon" présente les
+        pétitions massives exigeant que les États-Unis renoncent à leur
+        juridiction militaire. Les portraits des deux victimes (à droite)
+        symbolisent la douleur nationale.
+        <br /><span style="font-size: 0.9rem; opacity: 0.85">
+          Source : Comité pour la création du parc de la paix Hyosun-Miseon / Le
+          Monde Diplomatique<sup
+            ><a href="#source-3" class="citation-link">[3]</a></sup
+          >
+        </span>
+      </figcaption>
+    </figure>
+    <div class="highlight-box">
+      <h3>MOBILISATION HISTORIQUE</h3>
+      <p>
+        "<em
+          >Le 13 décembre 2002, six mois après l'incident, plus de 300 000
+          citoyens pleurèrent la mort des jeunes filles dans 57 endroits aux
+          quatre coins du pays</em
+        >"<sup><a href="#source-1" class="citation-link">[1]</a></sup
+        >. Cette mobilisation, orchestrée via Internet, porte au pouvoir
+        <strong>Roh Moo-hyun</strong>, premier président élu sur une vague
+        contestataire anti-américaine.
+      </p>
+    </div>
+  </section>
+
+  <section class="period-card">
+    <h2>LA GÉNÉRATION DES VEILLEURS AUX CHANDELLES</h2>
+    <p>
+      Cette nouvelle génération de manifestants, surnommée "<strong
+        >génération des veilleurs aux chandelles</strong
+      >", se distingue de ses prédécesseurs. Contrairement au mouvement minjung
+      des années 1980, ces jeunes Coréens "<em
+        >se rassemblent spontanément en ligne par réaction à ce qu'ils
+        perçoivent comme une menace contre la souveraineté du pays</em
+      >"<sup><a href="#source-1" class="citation-link">[1]</a></sup
+      >.
+    </p>
+    <figure class="period-image candles-large" style="margin: 3rem 0">
+      <img
+        src="{{ url_for('static', filename='images/yangju-candlelight-vigil-2002-crowd.jpg') }}"
+        alt="Première grande veillée aux chandelles en Corée du Sud, décembre 2002"
+      />
+      <figcaption>
+        <strong
+          >Décembre 2002 – Naissance de la "génération des veilleurs aux
+          chandelles"</strong
+        >
+        <br />
+        Des milliers de citoyens se rassemblent spontanément pour pleurer Shim
+        Mi-seon et Shin Hyo-sun, protestant contre l'attitude du gouvernement
+        américain et l'inégalité du SOFA (Status of Forces Agreement). Cette
+        veillée marque le début d'une nouvelle forme de protestation pacifique
+        qui deviendra emblématique de la démocratie sud-coréenne.
+
+        <br /><span style="font-size: 0.85rem; opacity: 0.8">
+          Source : Comité pour la création du parc de la paix Hyosun-Miseon / Le
+          Monde Diplomatique
+          <sup><a href="#source-3" class="citation-link">[3]</a></sup>
+        </span>
+      </figcaption>
+    </figure>
+    <div class="highlight-box">
+      <h3>DU NATIONALISME DE RÉSISTANCE AU NATIONALISME REVENDIQUÉ</h3>
+      <p>
+        Ce passage du "nationalisme de résistance" au "nationalisme revendiqué"
+        traduit une aspiration profonde : être traités en égaux par Washington.
+      </p>
+      <div class="dark-box">
+        <p style="margin: 0">
+          La jeune génération "<em
+            >ne considère plus la Corée du Sud comme une 'crevette au milieu
+            d'une bataille de baleines', mais comme un leader dans de nombreux
+            domaines à l'échelle mondiale</em
+          >"<sup><a href="#source-2" class="citation-link">[2]</a></sup
+          >.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="period-card">
+    <h2>LE DILEMME THAAD (2016-2017)</h2>
+    <p>
+      La décennie 2010 voit l'opinion se fragmenter. Le déploiement du système
+      antimissile américain
+      <strong>THAAD</strong> en 2016-2017 cristallise le dilemme sud-coréen :
+      accepter une protection renforcée de Washington au risque de froisser
+      Pékin. Ce clivage générationnel reflète des visions divergentes :
+      nécessité sécuritaire pour les anciens, entrave à l'autonomie pour les
+      jeunes.
+    </p>
+  </section>
+
+  <section class="period-card">
+    <h2>VERS UNE ATTITUDE PRAGMATIQUE</h2>
+    <p>
+      À la fin des années 2010, l'enquête de Timonen auprès d'étudiants révèle
+      une attitude désormais "pragmatique" : la majorité n'exprime ni hostilité
+      ni admiration, mais une neutralité calculée.
+    </p>
+
+    <div class="highlight-box">
+      <h4>UNE NEUTRALITÉ INSTABLE</h4>
+      <p style="margin: 0">
+        "<em
+          >Les Sud-Coréens ne savent pas vraiment quoi penser des États-Unis.
+          Cette neutralité peut basculer vers le pro-américanisme ou
+          l'anti-américanisme à tout moment</em
+        >"<sup><a href="#source-2" class="citation-link">[2]</a></sup
+        >.
+      </p>
     </div>
 
-<section class="period-card">
-        <h2>L'INCIDENT DE YANGJU (2002)</h2>
-        <p>
-            L'entrée dans le nouveau millénaire marque un tournant majeur dans les relations américano-coréennes : 
-            pour la première fois, l'opinion publique devient un acteur politique incontournable. Le 13 juin 2002, 
-            deux collégiennes, <strong>Shim Mi-seon et Shin Hyo-sun</strong>, sont écrasées par un véhicule blindé 
-            américain près de Yangju. L'acquittement des soldats responsables par un tribunal militaire américain 
-            déclenche une vague de protestations sans précédent.
-        </p>
-         <figure class="period-image" style="margin: 2.5rem 0;">
-        <img src="{{ url_for('static', filename='images/yangju-petition-2002.jpg') }}" 
-             alt="Conférence de presse présentant 1 million de signatures réclamant justice pour Shim Mi-seon et Shin Hyo-sun, 2002">
-        <figcaption>
-            <strong>2002 – Un million de signatures pour réclamer justice</strong>
-            <br>
-            Le "Comité national d'action pour l'incident du char blindé américain ayant tué les collégiennes 
-            Shin Hyo-sun et Shim Mi-seon" présente les pétitions massives exigeant que les États-Unis renoncent 
-            à leur juridiction militaire. Les portraits des deux victimes (à droite) symbolisent la douleur nationale.
-            <br><span style="font-size: 0.9rem; opacity: 0.85;">
-                Source : Comité pour la création du parc de la paix Hyosun-Miseon / Le Monde Diplomatique<sup><a href="#source-3" class="citation-link">[3]</a></sup>
-            </span>
-        </figcaption>
-    </figure>
-        <div class="highlight-box">
-            <h3>MOBILISATION HISTORIQUE</h3>
-            <p>
-                "<em>Le 13 décembre 2002, six mois après l'incident, plus de 300 000 citoyens pleurèrent la mort 
-                des jeunes filles dans 57 endroits aux quatre coins du pays</em>"<sup><a href="#source-1" class="citation-link">[1]</a></sup>. 
-                Cette mobilisation, orchestrée via Internet, porte au pouvoir <strong>Roh Moo-hyun</strong>, 
-                premier président élu sur une vague contestataire anti-américaine.
-            </p>
-        </div>
-    </section>
+    <p style="margin-top: 1.5rem">
+      Cette évolution témoigne d'une société qui, tout en restant
+      structurellement liée à l'alliance américaine, revendique une voix propre.
+    </p>
+  </section>
 
-    <section class="period-card">
-        <h2>LA GÉNÉRATION DES VEILLEURS AUX CHANDELLES</h2>
-        <p>
-            Cette nouvelle génération de manifestants, surnommée "<strong>génération des veilleurs aux chandelles</strong>", 
-            se distingue de ses prédécesseurs. Contrairement au mouvement minjung des années 1980, ces jeunes Coréens 
-            "<em>se rassemblent spontanément en ligne par réaction à ce qu'ils perçoivent comme une menace contre 
-            la souveraineté du pays</em>"<sup><a href="#source-1" class="citation-link">[1]</a></sup>.
-        </p>
-<figure class="period-image candles-large" style="margin: 3rem 0;">
-        <img src="{{ url_for('static', filename='images/yangju-candlelight-vigil-2002-crowd.jpg') }}" 
-             alt="Première grande veillée aux chandelles en Corée du Sud, décembre 2002">
-        <figcaption>
-            <strong>Décembre 2002 – Naissance de la "génération des veilleurs aux chandelles"</strong>
-            <br>
-            Des milliers de citoyens se rassemblent spontanément pour pleurer Shim Mi-seon et Shin Hyo-sun, 
-            protestant contre l'attitude du gouvernement américain et l'inégalité du SOFA (Status of Forces Agreement). 
-            Cette veillée marque le début d'une nouvelle forme de protestation pacifique qui deviendra emblématique 
-            de la démocratie sud-coréenne.
-            
-            <br><span style="font-size: 0.85rem; opacity: 0.8;">
-                Source : Comité pour la création du parc de la paix Hyosun-Miseon / Le Monde Diplomatique <sup><a href="#source-3" class="citation-link">[3]</a></sup>
-            </span>
-        </figcaption>
-    </figure>
-        <div class="highlight-box">
-            <h3>DU NATIONALISME DE RÉSISTANCE AU NATIONALISME REVENDIQUÉ</h3>
-            <p>
-                Ce passage du "nationalisme de résistance" au "nationalisme revendiqué" traduit une aspiration 
-                profonde : être traités en égaux par Washington.
-            </p>
-            <div class="dark-box">
-                <p style="margin: 0;">
-                    La jeune génération "<em>ne considère plus la Corée du Sud comme une 'crevette au milieu 
-                    d'une bataille de baleines', mais comme un leader dans de nombreux domaines à l'échelle 
-                    mondiale</em>"<sup><a href="#source-2" class="citation-link">[2]</a></sup>.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="period-card">
-        <h2>LE DILEMME THAAD (2016-2017)</h2>
-        <p>
-            La décennie 2010 voit l'opinion se fragmenter. Le déploiement du système antimissile américain 
-            <strong>THAAD</strong> en 2016-2017 cristallise le dilemme sud-coréen : accepter une protection 
-            renforcée de Washington au risque de froisser Pékin. Ce clivage générationnel reflète des visions 
-            divergentes : nécessité sécuritaire pour les anciens, entrave à l'autonomie pour les jeunes.
-        </p>
-    </section>
-
-    <section class="period-card">
-        <h2>VERS UNE ATTITUDE PRAGMATIQUE</h2>
-        <p>
-            À la fin des années 2010, l'enquête de Timonen auprès d'étudiants révèle une attitude désormais 
-            "pragmatique" : la majorité n'exprime ni hostilité ni admiration, mais une neutralité calculée.
-        </p>
-
-        <div class="highlight-box">
-            <h4>UNE NEUTRALITÉ INSTABLE</h4>
-            <p style="margin: 0;">
-                "<em>Les Sud-Coréens ne savent pas vraiment quoi penser des États-Unis. Cette neutralité peut 
-                basculer vers le pro-américanisme ou l'anti-américanisme à tout moment</em>"<sup><a href="#source-2" class="citation-link">[2]</a></sup>.
-            </p>
-        </div>
-
-        <p style="margin-top: 1.5rem;">
-            Cette évolution témoigne d'une société qui, tout en restant structurellement liée à l'alliance 
-            américaine, revendique une voix propre.
-        </p>
-    </section>
-
-    <section class="period-card">
+  <section class="period-card">
     <h3>Témoignage : la voix d'une jeune Coréenne</h3>
-    <p>Pour comprendre comment la jeune génération perçoit aujourd'hui la relation avec les États-Unis, j'ai recueilli le témoignage d'Eom Hyunsoo, 27 ans, qui a participé aux manifestations aux bougies de 2016.</p>
-    <a href="/interview" class="btn-interview">
-        Voir l'interview complète
-    </a>
-</section>
+    <p>
+      Pour comprendre comment la jeune génération perçoit aujourd'hui la
+      relation avec les États-Unis, j'ai recueilli le témoignage d'Eom Hyunsoo,
+      27 ans, qui a participé aux manifestations aux bougies de 2016.
+    </p>
+    <a href="/interview" class="btn-interview"> Voir l'interview complète </a>
+  </section>
 
-    <!-- SECTION SOURCES -->
-    <section class="period-card sources-section">
-        <h2>SOURCES DE CETTE PAGE</h2>
-        
-        <div class="sources-grid">
-            <div id="source-1" class="source-item">
-                <strong>[1]</strong> 
-                <span>FIORI Antonio</span>, 
-                "<em>Manifestations antiaméricaines en Corée du Sud dans les années 2000 : une forme de nationalisme revendiqué</em>", 
-                <em>Outre-Terre</em>, n°39, p.162-176, 2014, Paris.
-            </div>
-            
-            <div id="source-2" class="source-item">
-                <strong>[2]</strong> 
-                <span>TIMONEN Elina</span>, 
-                "<em>Anti-Americanism among South Korean university students</em>", 
-                2019.
-            </div>
+  <!-- SECTION SOURCES -->
+  <section class="period-card sources-section">
+    <h2>SOURCES DE CETTE PAGE</h2>
 
-            <div id="source-3" class="source-item">
-                <strong>[3]</strong> 
-                <span>Photos d'archives : </span>
-                <em>Comité pour la création du parc de la paix Hyosun-Miseon</em>, 
-                via <em>Le Monde Diplomatique</em>, (édition coréenne). 
-                Disponible sur : 
-                <a href="https://www.ilemonde.com/news/articleView.html?idxno=12845" target="_blank">
-                                Le Monde Diplomatique
+    <div class="sources-grid">
+      <div id="source-1" class="source-item">
+        <strong>[1]</strong>
+        <span>FIORI Antonio</span>, "<em
+          >Manifestations antiaméricaines en Corée du Sud dans les années 2000 :
+          une forme de nationalisme revendiqué</em
+        >", <em>Outre-Terre</em>, n°39, p.162-176, 2014, Paris.
+        <a href="https://doi-org.lama.univ-amu.fr/10.3917/oute1.039.0162"
+          >https://doi-org.lama.univ-amu.fr/10.3917/oute1.039.0162</a>
+      </div>
 
-                </a>
-            </div>
-        </div>
-        
+      <div id="source-2" class="source-item">
+        <strong>[2]</strong>
+        <span>TIMONEN Elina</span>, "<em
+          >Anti-Americanism among South Korean university students</em
+        >", 2019.
+        <a
+          href="https://helda.helsinki.fi/items/5a6c1da2-1ac4-4942-96cd-3036facecdc6"
+          target="_blank"
+          >https://helda.helsinki.fi/items/5a6c1da2-1ac4-4942-96cd-3036facecdc6</a>
+      </div>
 
-        
-        <div style="margin-top: 2rem; text-align: center;">
-            <a href="/ressources" class="btn-biblio">Voir la bibliographie complète</a>
-        </div>
-    </section>
+      <div id="source-3" class="source-item">
+        <strong>[3]</strong>
+        <span>Photos d'archives : </span>
+        <em>Comité pour la création du parc de la paix Hyosun-Miseon</em>, via
+        <em>Le Monde Diplomatique</em>, (édition coréenne). Disponible sur :
+        <a
+          href="https://www.ilemonde.com/news/articleView.html?idxno=12845"
+          target="_blank"
+        >
+          Le Monde Diplomatique
+        </a>
+      </div>
+    </div>
 
-    <!-- NAVIGATION ENTRE PÉRIODES -->
-    <section class="period-card period-navigation">
-        <h2>NAVIGATION</h2>
-        
-        <div class="nav-buttons">
-            <a href="/periode3" class="btn-nav btn-nav-prev">
-                <span>←</span>
-                1987-2000 : L'hégémonie démocratique
-            </a>
-            
-            <a href="/" class="nav-home">
-                Retour à l'accueil
-            </a>
-            
-            <a href="/conclusion" class="btn-nav btn-nav-next">
-                Conclusion
-                <span>→</span>
-            </a>
-        </div>
-    </section>
+    <div style="margin-top: 2rem; text-align: center">
+      <a href="/ressources" class="btn-biblio"
+        >Voir la bibliographie complète</a
+      >
+    </div>
+  </section>
+
+  <!-- NAVIGATION ENTRE PÉRIODES -->
+  <section class="period-card period-navigation">
+    <h2>NAVIGATION</h2>
+
+    <div class="nav-buttons">
+      <a href="/periode3" class="btn-nav btn-nav-prev">
+        <span>←</span>
+        1987-2000 : L'hégémonie démocratique
+      </a>
+
+      <a href="/" class="nav-home"> Retour à l'accueil </a>
+
+      <a href="/conclusion" class="btn-nav btn-nav-next">
+        Conclusion
+        <span>→</span>
+      </a>
+    </div>
+  </section>
 </div>
 {% endblock %}

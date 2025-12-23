@@ -1,217 +1,318 @@
-{% extends "base.html" %}
-
-{% block body_class %}period1{% endblock %}
-
-{% block title %}{{ title }} - États-Unis et Corée du Sud{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block body_class %}period1{% endblock %} {% block
+title %}{{ title }} - États-Unis et Corée du Sud{% endblock %} {% block content
+%}
 <div class="container period1">
-    <div class="hero-visual">
-        <h1>{{ title }}</h1>
-        <p>Partition • Guerre • Installation de la domination américaine</p>
-    </div>
+  <div class="hero-visual">
+    <h1>{{ title }}</h1>
+    <p>Partition • Guerre • Installation de la domination américaine</p>
+  </div>
 
- <section class="period-card">
-        <h2>LA LIBÉRATION ET LA PARTITION (1945)</h2>
-        <p>
-            Après 45 ans sous domination japonaise, la Corée est libérée le 15 août 1945. Cependant, 
-            les États-Unis et l'URSS "<em>décidèrent de se partager le territoire arbitrairement coupé sur 
-            le <strong>38e parallèle</strong></em>"<sup><a href="#source-1" class="citation-link">[1]</a></sup>. Le pays, qui espérait recouvrer son indépendance, se 
-            retrouve pris dans une nouvelle guerre froide, toujours en cours à ce jour.
-        </p>
-        <div style="background: rgba(231, 76, 60, 0.15); padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; border-left: 4px solid #e74c3c;">
-            <p style="margin: 0; color: #ecf0f1;">
-                <strong style="color: #e74c3c;">Au nord :</strong> l'URSS installe Kim Il-sung au pouvoir<br>
-                <strong style="color: #e74c3c;">Au sud :</strong> les Américains installent un régime militaire avec Syngman Rhee, 
-                "<em>un farouche anticommuniste rapatrié des États-Unis</em>"<sup><a href="#source-1" class="citation-link">[1]</a></sup>, qui prône une réunification par la force
-            </p>
-        </div>
-      
-    </section>
-
-    <section class="period-card">
-        <h2>LES PRÉMICES DU CONFLIT</h2>
-        <p>
-            Ainsi jusqu'en 1950, le nord et le sud deviennent "<em>les jouets des deux grandes puissances américaine 
-            et soviétique</em>"<sup><a href="#source-1" class="citation-link">[1]</a></sup>. Le nord adopte le modèle soviétique pour se moderniser, devenant un pays "<em>neuf et fort</em>"<sup><a href="#source-1" class="citation-link">[1]</a></sup> grâce à ses matières premières et ses industries. Le sud, en revanche, est instable, 
-            confronté à de nombreuses rébellions et guérillas suivies de sévères répressions.
-        </p>
-
-       
-
-        <div style="background: rgba(0,0,0,0.4); padding: 1.5rem; border: 2px solid #7f8c8d; margin: 1.5rem 0;">
-            <h4 style="color: #e74c3c; font-size: 1.2rem; margin-bottom: 1rem;">MASSACRE DE JEJU (1948-1953)</h4>
-            <p style="margin-bottom: 1rem;">
-                C'est ainsi que de 1948 à 1953, les habitants de l'île de Jeju furent massacrés, pour leur opposition à 
-            la partition du pays et au contrôle politique américain anti-communiste. Cette photo d'archive américaine 
-            documente les arrestations massives qui précédèrent les exécutions.
-            </p>
-           
-
-             <figure class="period-image">
-        <img src="{{ url_for('static', filename='images/jeju-prisonniers-1948.jpg') }}" 
-             alt="Prisonniers attendant d'être interrogés lors du massacre de Jeju, novembre 1948">
-        <figcaption>
-            Habitants de Jeju arrêtés et alignés en attente d'interrogatoire (novembre 1948) – 
-            Des milliers de civils furent détenus, interrogés et exécutés pendant la répression
-            <br><span style="font-size: 0.8rem; opacity: 0.8;">
-                Source : US National Archives and Records Administration, 
-                via <em>The Jeju 4.3 Incident Investigation Report</em><sup><a href="#source-3" class="citation-link">[3]</a></sup>
-            </span>
-        </figcaption>
-    </figure>
-
-        </div>
-    </section>
-
-   <section class="period-card">
-    <h2>LA GUERRE DE CORÉE (1950-1953)</h2>
-
-   
-    
-    <!-- CARTE À GAUCHE + TEXTE À DROITE -->
-    <div class="content-with-image">
-        <figure class="period-image-left">
-            <img src="{{ url_for('static', filename='images/carte-guerre-coree-mouvements.jpg') }}" 
-                 alt="Carte des mouvements des forces pendant la guerre de Corée">
-            <figcaption>
-                Mouvements des forces US et ONU (1950-1953)
-                <br><span style="font-size: 0.8rem; opacity: 0.8;">Source : Encyclopædia Britannica</span><sup><a href="#source-4" class="citation-link">[4]</a></sup>
-            </figcaption>
-        </figure>
-
-        <div class="text-beside-image">
-             <h3 style="color: #e74c3c; font-size: 1.5rem; margin-top: 1.5rem;">Le déclenchement (25 juin 1950)</h3>
+  <section class="period-card">
+    <h2>LA LIBÉRATION ET LA PARTITION (1945)</h2>
     <p>
-        À la fin de 1949, les forces occupantes quittent le nord et le sud. Livrés à eux-mêmes, 
-        les deux États, poussés par le nationalisme et leur désir d'indépendance, voient les tensions 
-        escalader. L'attaque nord-coréenne du 25 juin 1950 change radicalement la situation : craignant 
-        que les Soviétiques ne prennent le contrôle de la péninsule, les troupes américaines reviennent 
-        massivement au sud. C'est ainsi que débute la guerre de Corée, au cours de laquelle des milliers 
-        de civils nord et sud-coréens perdent la vie.
+      Après 45 ans sous domination japonaise, la Corée est libérée le 15 août
+      1945. Cependant, les États-Unis et l'URSS "<em
+        >décidèrent de se partager le territoire arbitrairement coupé sur le
+        <strong>38e parallèle</strong></em
+      >"<sup><a href="#source-1" class="citation-link">[1]</a></sup
+      >. Le pays, qui espérait recouvrer son indépendance, se retrouve pris dans
+      une nouvelle guerre froide, toujours en cours à ce jour.
+    </p>
+    <div
+      style="
+        background: rgba(231, 76, 60, 0.15);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 1.5rem;
+        border-left: 4px solid #e74c3c;
+      "
+    >
+      <p style="margin: 0; color: #ecf0f1">
+        <strong style="color: #e74c3c">Au nord :</strong> l'URSS installe Kim
+        Il-sung au pouvoir<br />
+        <strong style="color: #e74c3c">Au sud :</strong> les Américains
+        installent un régime militaire avec Syngman Rhee, "<em
+          >un farouche anticommuniste rapatrié des États-Unis</em
+        >"<sup><a href="#source-1" class="citation-link">[1]</a></sup
+        >, qui prône une réunification par la force
+      </p>
+    </div>
+  </section>
+
+  <section class="period-card">
+    <h2>LES PRÉMICES DU CONFLIT</h2>
+    <p>
+      Ainsi jusqu'en 1950, le nord et le sud deviennent "<em
+        >les jouets des deux grandes puissances américaine et soviétique</em
+      >"<sup><a href="#source-1" class="citation-link">[1]</a></sup
+      >. Le nord adopte le modèle soviétique pour se moderniser, devenant un
+      pays "<em>neuf et fort</em>"<sup
+        ><a href="#source-1" class="citation-link">[1]</a></sup
+      >
+      grâce à ses matières premières et ses industries. Le sud, en revanche, est
+      instable, confronté à de nombreuses rébellions et guérillas suivies de
+      sévères répressions.
     </p>
 
-    <h3 style="color: #e74c3c; font-size: 1.5rem; margin-top: 2rem;">Un conflit dévastateur</h3>
-            <p>
-                Cette guerre de 3 ans est un aller-retour permanent des troupes sur le territoire, 
-                les Soviétiques et les Américains prenant tour à tour l'avantage.
-            </p>
-            <p>
-                Comme le montre la carte ci-contre, les forces américaines et de l'ONU atteignent 
-            la frontière chinoise en novembre 1950 (ligne rouge en pointillés au nord), 
-            avant d'être repoussées jusqu'au sud de Séoul en janvier 1951 par l'intervention 
-            chinoise. Le front finit par se stabiliser près du 38e parallèle d'origine.
-            </p>
-        </div>
-    </div>
-    
-    <div style="background: rgba(231, 76, 60, 0.2); padding: 1.5rem; margin-top: 1.5rem; border: 3px solid #e74c3c; clear: both;">
-        <strong style="color: #e74c3c; font-size: 1.2rem; display: block; margin-bottom: 0.5rem;">
-            ARMISTICE DU 27 JUILLET 1953
-        </strong>
-        <p style="margin: 0;">
-            Suite à l'échec de longues négociations, elle aboutit finalement au maintien du 38e parallèle 
-            et à la signature d'un armistice le 27 juillet 1953.
-        </p>
-    </div>
-</section>
+    <div
+      style="
+        background: rgba(0, 0, 0, 0.4);
+        padding: 1.5rem;
+        border: 2px solid #7f8c8d;
+        margin: 1.5rem 0;
+      "
+    >
+      <h4 style="color: #e74c3c; font-size: 1.2rem; margin-bottom: 1rem">
+        MASSACRE DE JEJU (1948-1953)
+      </h4>
+      <p style="margin-bottom: 1rem">
+        C'est ainsi que de 1948 à 1953, les habitants de l'île de Jeju furent
+        massacrés, pour leur opposition à la partition du pays et au contrôle
+        politique américain anti-communiste. Cette photo d'archive américaine
+        documente les arrestations massives qui précédèrent les exécutions.
+      </p>
 
-    <section class="period-card">
-        <h2>L'INSTALLATION DE LA DOMINATION AMÉRICAINE</h2>
+      <figure class="period-image">
+        <img
+          src="{{ url_for('static', filename='images/jeju-prisonniers-1948.jpg') }}"
+          alt="Prisonniers attendant d'être interrogés lors du massacre de Jeju, novembre 1948"
+        />
+        <figcaption>
+          Habitants de Jeju arrêtés et alignés en attente d'interrogatoire
+          (novembre 1948) – Des milliers de civils furent détenus, interrogés et
+          exécutés pendant la répression
+          <br /><span style="font-size: 0.8rem; opacity: 0.8">
+            Source : US National Archives and Records Administration, via
+            <em>The Jeju 4.3 Incident Investigation Report</em
+            ><sup><a href="#source-3" class="citation-link">[3]</a></sup>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="period-card">
+    <h2>LA GUERRE DE CORÉE (1950-1953)</h2>
+
+    <!-- CARTE À GAUCHE + TEXTE À DROITE -->
+    <div class="content-with-image">
+      <figure class="period-image-left">
+        <img
+          src="{{ url_for('static', filename='images/carte-guerre-coree-mouvements.jpg') }}"
+          alt="Carte des mouvements des forces pendant la guerre de Corée"
+        />
+        <figcaption>
+          Mouvements des forces US et ONU (1950-1953)
+          <br /><span style="font-size: 0.8rem; opacity: 0.8"
+            >Source : Encyclopædia Britannica</span
+          ><sup><a href="#source-4" class="citation-link">[4]</a></sup>
+        </figcaption>
+      </figure>
+
+      <div class="text-beside-image">
+        <h3 style="color: #e74c3c; font-size: 1.5rem; margin-top: 1.5rem">
+          Le déclenchement (25 juin 1950)
+        </h3>
         <p>
-            C'est ainsi que les États-Unis ont "<em>sauvé le Sud de l'extinction</em>"<sup><a href="#source-2" class="citation-link">[2]</a></sup> 
-            et instauré une <strong>dépendance permanente</strong> sur le Sud.
+          À la fin de 1949, les forces occupantes quittent le nord et le sud.
+          Livrés à eux-mêmes, les deux États, poussés par le nationalisme et
+          leur désir d'indépendance, voient les tensions escalader. L'attaque
+          nord-coréenne du 25 juin 1950 change radicalement la situation :
+          craignant que les Soviétiques ne prennent le contrôle de la péninsule,
+          les troupes américaines reviennent massivement au sud. C'est ainsi que
+          débute la guerre de Corée, au cours de laquelle des milliers de civils
+          nord et sud-coréens perdent la vie.
         </p>
 
-        <div style="margin-top: 2rem;">
-            <div style="background: rgba(52, 73, 94, 0.6); padding: 1.5rem; margin-bottom: 1rem; border-left: 5px solid #e74c3c;">
-                <h4 style="color: #e74c3c; font-size: 1.2rem; margin: 0 0 0.5rem 0;">1953 : TRAITÉ DE DÉFENSE MUTUELLE</h4>
-                <p style="margin: 0;">
-                    Cette alliance est officialisée dès 1953 par la signature d'un traité de défense mutuelle.
-                </p>
-            </div>
-
-            <div style="background: rgba(52, 73, 94, 0.6); padding: 1.5rem; margin-bottom: 1rem; border-left: 5px solid #e74c3c;">
-                <h4 style="color: #e74c3c; font-size: 1.2rem; margin: 0 0 0.5rem 0;">1953-1960 : BASES MILITAIRES PERMANENTES</h4>
-                <p style="margin: 0;">
-                    Installation de bases militaires permanentes au Sud.
-                </p>
-            </div>
-
-            <div style="background: rgba(52, 73, 94, 0.6); padding: 1.5rem; border-left: 5px solid #e74c3c;">
-                <h4 style="color: #e74c3c; font-size: 1.2rem; margin: 0 0 0.5rem 0;">1958 : ARMES NUCLÉAIRES SECRÈTES</h4>
-                <p style="margin: 0;">
-                    Introduction secrète d'armes nucléaires en Corée du Sud.
-                </p>
-            </div>
-        </div>
-
-        <p style="margin-top: 2rem;">
-            Cette alliance, imposée par les circonstances, évolue progressivement en un système de domination 
-            politique et économique des États-Unis.
+        <h3 style="color: #e74c3c; font-size: 1.5rem; margin-top: 2rem">
+          Un conflit dévastateur
+        </h3>
+        <p>
+          Cette guerre de 3 ans est un aller-retour permanent des troupes sur le
+          territoire, les Soviétiques et les Américains prenant tour à tour
+          l'avantage.
         </p>
-    </section>
+        <p>
+          Comme le montre la carte ci-contre, les forces américaines et de l'ONU
+          atteignent la frontière chinoise en novembre 1950 (ligne rouge en
+          pointillés au nord), avant d'être repoussées jusqu'au sud de Séoul en
+          janvier 1951 par l'intervention chinoise. Le front finit par se
+          stabiliser près du 38e parallèle d'origine.
+        </p>
+      </div>
+    </div>
 
-    <!-- SECTION SOURCES -->
-    <section class="period-card sources-section">
-        <h2>SOURCES DE CETTE PAGE</h2>
-        
-        <div class="sources-grid">
-            <div id="source-1" class="source-item">
-                <strong>[1]</strong> 
-                <span>MORILLOT Juliette</span>, 
-                "<em>Les deux Corées depuis 1945 : guerre froide et nationalisme coréen</em>", 
-                <em>Pouvoirs</em>, n°169, p.17-28, 2018, Paris.
-            </div>
-            
-            <div id="source-2" class="source-item">
-                <strong>[2]</strong> 
-                <span>DUJARRIC Robert</span>, 
-                "<em>America confronts North Korea: A historical perspective and a look at the future</em>", 
-                <em>Monde chinois</em>, n°54, p.55-68, 2018, Paris.
-            </div>
-            <div id="source-3" class="source-item">
-                <strong>[3]</strong> 
-                <span>Carte : </span>
-                "<em>United States and United Nations Forces in the Korean War, 1950–53</em>", 
-                Encyclopædia Britannica, Inc. 
-                Disponble sur : 
-                <a href="https://www.britannica.com/event/Korean-War/Talking-and-fighting-1951-53">Britannica</a>
-            </div>
-            <div id="source-4" class="source-item">
-                <strong>[4]</strong> 
-                <span>Photo d'archive : </span>
-                "Inmates waiting in line to be interrogated, November 1948", 
-                <em>US National Archives and Records Administration</em>, 
-                via <em>The Jeju 4.3 Incident Investigation Report</em>. 
-                Domaine public.
-            </div>
-        </div>
+    <div
+      style="
+        background: rgba(231, 76, 60, 0.2);
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        border: 3px solid #e74c3c;
+        clear: both;
+      "
+    >
+      <strong
+        style="
+          color: #e74c3c;
+          font-size: 1.2rem;
+          display: block;
+          margin-bottom: 0.5rem;
+        "
+      >
+        ARMISTICE DU 27 JUILLET 1953
+      </strong>
+      <p style="margin: 0">
+        Suite à l'échec de longues négociations, elle aboutit finalement au
+        maintien du 38e parallèle et à la signature d'un armistice le 27 juillet
+        1953.
+      </p>
+    </div>
+  </section>
 
-        
-        <div style="margin-top: 2rem; text-align: center;">
-            <a href="/ressources" class="btn-biblio">Voir la bibliographie complète</a>
-        </div>
-    </section>
+  <section class="period-card">
+    <h2>L'INSTALLATION DE LA DOMINATION AMÉRICAINE</h2>
+    <p>
+      C'est ainsi que les États-Unis ont "<em>sauvé le Sud de l'extinction</em
+      >"<sup><a href="#source-2" class="citation-link">[2]</a></sup> et instauré
+      une <strong>dépendance permanente</strong> sur le Sud.
+    </p>
 
-    <!-- NAVIGATION ENTRE PÉRIODES -->
-    <section class="period-card period-navigation">
-        <h2>NAVIGATION</h2>
-        
-        <div class="nav-buttons">
-            <div>
-                <!-- Vide car première période -->
-            </div>
-            
-            <a href="/" class="nav-home" style="color: #bdc3c7; text-decoration: none; font-size: 0.9rem;">
-                Retour à l'accueil
-            </a>
-            
-            <a href="/periode2" class="btn-nav btn-nav-next">
-                1960-1987 : L'hégémonie autoritaire
-                <span>→</span>
-            </a>
-        </div>
-    </section>
+    <div style="margin-top: 2rem">
+      <div
+        style="
+          background: rgba(52, 73, 94, 0.6);
+          padding: 1.5rem;
+          margin-bottom: 1rem;
+          border-left: 5px solid #e74c3c;
+        "
+      >
+        <h4 style="color: #e74c3c; font-size: 1.2rem; margin: 0 0 0.5rem 0">
+          1953 : TRAITÉ DE DÉFENSE MUTUELLE
+        </h4>
+        <p style="margin: 0">
+          Cette alliance est officialisée dès 1953 par la signature d'un traité
+          de défense mutuelle.
+        </p>
+      </div>
+
+      <div
+        style="
+          background: rgba(52, 73, 94, 0.6);
+          padding: 1.5rem;
+          margin-bottom: 1rem;
+          border-left: 5px solid #e74c3c;
+        "
+      >
+        <h4 style="color: #e74c3c; font-size: 1.2rem; margin: 0 0 0.5rem 0">
+          1953-1960 : BASES MILITAIRES PERMANENTES
+        </h4>
+        <p style="margin: 0">
+          Installation de bases militaires permanentes au Sud.
+        </p>
+      </div>
+
+      <div
+        style="
+          background: rgba(52, 73, 94, 0.6);
+          padding: 1.5rem;
+          border-left: 5px solid #e74c3c;
+        "
+      >
+        <h4 style="color: #e74c3c; font-size: 1.2rem; margin: 0 0 0.5rem 0">
+          1958 : ARMES NUCLÉAIRES SECRÈTES
+        </h4>
+        <p style="margin: 0">
+          Introduction secrète d'armes nucléaires en Corée du Sud.
+        </p>
+      </div>
+    </div>
+
+    <p style="margin-top: 2rem">
+      Cette alliance, imposée par les circonstances, évolue progressivement en
+      un système de domination politique et économique des États-Unis.
+    </p>
+  </section>
+
+  <!-- SECTION SOURCES -->
+  <section class="period-card sources-section">
+    <h2>SOURCES DE CETTE PAGE</h2>
+
+    <div class="sources-grid">
+      <div id="source-1" class="source-item">
+        <strong>[1]</strong>
+        <span>MORILLOT Juliette</span>, "<em
+          >Les deux Corées depuis 1945 : guerre froide et nationalisme
+          coréen</em
+        >", <em>Pouvoirs</em>, n°169, p.17-28, 2018, Paris.
+        <a href="https://doi-org.lama.univ-amu.fr/10.3917/mochi.053.0058"
+          >https://doi-org.lama.univ-amu.fr/10.3917/mochi.053.0058</a
+        >
+      </div>
+
+      <div id="source-2" class="source-item">
+        <strong>[2]</strong>
+        <span>DUJARRIC Robert</span>, "<em
+          >America confronts North Korea: A historical perspective and a look at
+          the future</em
+        >", <em>Monde chinois</em>, n°54, p.55-68, 2018, Paris.
+        <a href="https://doi-org.lama.univ-amu.fr/10.3917/pouv.167.0017"
+          >https://doi-org.lama.univ-amu.fr/10.3917/pouv.167.0017</a
+        >
+      </div>
+      <div id="source-3" class="source-item">
+        <strong>[3]</strong>
+        <span>Carte : </span>
+        "<em
+          >United States and United Nations Forces in the Korean War,
+          1950–53</em
+        >", Encyclopædia Britannica, Inc.
+        <a
+          href="https://www.britannica.com/event/Korean-War/Talking-and-fighting-1951-53"
+          >Britannica</a
+        >
+      </div>
+      <div id="source-4" class="source-item">
+        <strong>[4]</strong>
+        <span>Photo d'archive : </span>
+        "<em>Inmates waiting in line to be interrogated, November 1948</em>",
+        <em>US National Archives and Records Administration</em>, dans
+        <em>The Jeju 4.3 Incident Investigation Report</em>.
+        <a
+          href="https://cdm21069.contentdm.oclc.org/digital/collection/ppl1/id/15549/"
+          >Peace Palace Library Digital Collections</a
+        >
+      </div>
+    </div>
+
+    <div style="margin-top: 2rem; text-align: center">
+      <a href="/ressources" class="btn-biblio"
+        >Voir la bibliographie complète</a
+      >
+    </div>
+  </section>
+
+  <!-- NAVIGATION ENTRE PÉRIODES -->
+  <section class="period-card period-navigation">
+    <h2>NAVIGATION</h2>
+
+    <div class="nav-buttons">
+      <div>
+        <!-- Vide car première période -->
+      </div>
+
+      <a
+        href="/"
+        class="nav-home"
+        style="color: #bdc3c7; text-decoration: none; font-size: 0.9rem"
+      >
+        Retour à l'accueil
+      </a>
+
+      <a href="/periode2" class="btn-nav btn-nav-next">
+        1960-1987 : L'hégémonie autoritaire
+        <span>→</span>
+      </a>
+    </div>
+  </section>
 </div>
 {% endblock %}
