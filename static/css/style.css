@@ -103,6 +103,9 @@ body {
     font-weight: 700;
 }
 
+nav.navbar {
+        max-height: 60px;
+}
 .period1 nav.navbar {
     background: rgba(0,0,0,0.8) !important;
     box-shadow: 0 4px 20px rgba(231, 76, 60, 0.3);
@@ -3672,6 +3675,7 @@ body.interview .btn-nav:hover {
     gap: 2rem;
     margin: 2rem 0;
     align-items: stretch;
+    height: 800px;
 }
 
 /* Section PDF à gauche (contrôles + canvas) */
@@ -3735,7 +3739,6 @@ display: flex;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     padding: 2rem;
-    height: calc(var(--pdf-info-sidebar-height, 600px) + 4rem);
 }
 
 #pdf-canvas {
@@ -3743,7 +3746,7 @@ display: flex;
     margin: 0 auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     margin-left:-25%;
-    margin-top:-33%
+    margin-top:-25%
 }
 
 /* Sidebar d'informations à droite */
@@ -4049,4 +4052,364 @@ display: flex;
     .commentary-section h4 {
         font-size: 1.3rem;
     }
+}
+
+/* Style spécifique pour les encadrés de factions */
+.argument-box ul {
+    margin: 0.5rem 0 0 1.5rem;
+    padding: 0;
+}
+
+.argument-box ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Limite de l'article */
+.article-section ul li {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+
+.period2 .article-scientific-box {
+    background: rgba(30, 30, 30, 0.95);
+    border: 5px solid #dc143c;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    box-shadow: 
+        10px 10px 0px rgba(220, 20, 60, 0.5),
+        20px 20px 0px rgba(0,0,0,0.3);
+    position: relative;
+    transform: rotate(0.3deg);
+}
+
+/* Badge "ARTICLE SCIENTIFIQUE" */
+.period2 .doc-badge.article-badge {
+    position: absolute;
+    top: -20px;
+    left: 40px;
+    background: #dc143c;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 3px solid #fff;
+    box-shadow: 
+        5px 5px 0px #000,
+        10px 10px 0px rgba(0,0,0,0.3);
+    z-index: 10;
+    transform: rotate(-2deg);
+}
+
+/* Référence complète */
+.period2 .article-reference {
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 5px solid #dc143c;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.period2 .article-reference h4 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.period2 .article-author,
+.period2 .article-meta {
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 0.5rem 0;
+}
+
+.period2 .article-author strong,
+.period2 .article-meta strong {
+    color: #dc143c;
+    font-weight: 900;
+}
+
+/* Sections de l'article */
+.period2 .article-section {
+    background: rgba(0, 0, 0, 0.4);
+    border-left: 4px solid #fff;
+    padding: 1.8rem;
+    margin: 2rem 0;
+}
+
+.period2 .article-section h5 {
+    color: #dc143c;
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 1.2rem 0;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.period2 .article-section h6 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin: 1.5rem 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.period2 .article-section p {
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.period2 .article-section ul,
+.period2 .article-section ol {
+    color: #ddd;
+    margin: 1rem 0 1rem 2rem;
+    padding: 0;
+}
+
+.period2 .article-section li {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+.period2 .article-section li strong {
+    color: #fff;
+    font-weight: 900;
+}
+
+/* Encadrés arguments */
+.period2 .argument-box {
+    background: rgba(220, 20, 60, 0.1);
+    border: 3px solid #dc143c;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.period2 .argument-box h6 {
+    color: #dc143c;
+    font-size: 1.1rem;
+    font-weight: 900;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+}
+
+.period2 .argument-box p {
+    margin-bottom: 1rem;
+}
+
+.period2 .argument-box ul {
+    margin-left: 1.5rem;
+}
+
+/* Encadré faction Self-Reliance (rouge) */
+.period2 .argument-box > div[style*="rgba(231, 76, 60"] {
+    background: rgba(231, 76, 60, 0.15) !important;
+    border-left: 4px solid #e74c3c !important;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.period2 .argument-box > div[style*="rgba(231, 76, 60"] strong {
+    color: #e74c3c !important;
+    font-weight: 900;
+}
+
+/* Encadré faction Equality (bleu) */
+.period2 .argument-box > div[style*="rgba(52, 152, 219"] {
+    background: rgba(52, 152, 219, 0.15) !important;
+    border-left: 4px solid #3498db !important;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.period2 .argument-box > div[style*="rgba(52, 152, 219"] strong {
+    color: #3498db !important;
+    font-weight: 900;
+}
+
+/* Citations dans le texte (em) */
+.period2 .article-section em {
+    color: #f39c12;
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* Liens de citation */
+.period2 .citation-link {
+    color: #dc143c;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.period2 .citation-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Conclusion de l'article */
+.period2 .commentary-conclusion {
+    background: rgba(220, 20, 60, 0.2);
+    border: 4px solid #dc143c;
+    border-left: 8px solid #dc143c;
+    padding: 2rem;
+    margin-top: 3rem;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.4);
+}
+
+.period2 .commentary-conclusion h4 {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 1.5rem 0;
+    text-shadow: 3px 3px 0px #000;
+    letter-spacing: -0.5px;
+}
+
+.period2 .commentary-conclusion p {
+    color: #fff;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.period2 .commentary-conclusion p:last-child {
+    margin-bottom: 0;
+}
+
+/* Bouton bibliographie */
+.period2 .btn-biblio {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #dc143c;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: 3px solid #fff;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+}
+
+.period2 .btn-biblio:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 0px #dc143c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .period2 .article-scientific-box {
+        padding: 1.5rem;
+        box-shadow: 
+            5px 5px 0px rgba(220, 20, 60, 0.5),
+            10px 10px 0px rgba(0,0,0,0.3);
+    }
+
+    .period2 .doc-badge.article-badge {
+        top: -15px;
+        left: 20px;
+        padding: 0.4rem 1rem;
+        font-size: 0.7rem;
+    }
+
+    .period2 .article-reference {
+        padding: 1rem;
+    }
+
+    .period2 .article-reference h4 {
+        font-size: 1.2rem;
+    }
+
+    .period2 .article-section {
+        padding: 1.2rem;
+    }
+
+    .period2 .article-section h5 {
+        font-size: 1.2rem;
+    }
+
+    .period2 .article-section h6 {
+        font-size: 1.05rem;
+    }
+
+    .period2 .article-section ul,
+    .period2 .article-section ol {
+        margin-left: 1.2rem;
+    }
+
+    .period2 .argument-box {
+        padding: 1rem;
+    }
+
+    .period2 .commentary-conclusion {
+        padding: 1.5rem;
+    }
+
+    .period2 .commentary-conclusion h4 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Animation des encadrés au scroll (optionnel) */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.period2 .article-section {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+/* Numérotation des sources */
+.period2 .article-section sup {
+    color: #dc143c;
+    font-weight: 900;
+}
+
+/* Style pour les listes numérotées */
+.period2 .article-section ol {
+    counter-reset: item;
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.period2 .article-section ol > li {
+    counter-increment: item;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.period2 .article-section ol > li::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
+    color: #dc143c;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+/* Style pour les listes à puces */
+.period2 .article-section ul > li::marker {
+    color: #dc143c;
+    font-size: 1.2rem;
 }

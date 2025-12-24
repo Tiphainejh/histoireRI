@@ -10,7 +10,7 @@ portraits…),
 - [x]  une rubrique de bibliographie, sources et liens utiles,
 - [ ]  une ou des rubriques « documents » relatifs au sujet que vous devez
 commenter/présenter, dont au moins :
-    - [ ]  un document d’archives
+    - [x]  un document d’archives
     - [ ]  une image
     - [ ]  un texte scientifique (article)
 - [x]  2 ressources issues d’un travail personnel faisant clairement apparaître votre
