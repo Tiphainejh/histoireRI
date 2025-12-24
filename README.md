@@ -39,3 +39,4 @@ Préciser le contexte historique, politique, culturel dans lequel est produit l�
 De l’analyse formelle à l’interprétation, en s’appuyant sur le contexte
 Votre lecture de l’image: quelle fonction de l’image? Quels symboles?
 Commentaire et synthèse, portée générale éventuelle
+

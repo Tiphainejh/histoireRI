@@ -3557,7 +3557,6 @@ body.interview .btn-nav:hover {
     overflow: hidden;
 }
 
-/* Effet neige (comme body.jeju::before) */
 .period-preview.jeju-card::before {
     content: '';
     position: absolute;
@@ -3573,7 +3572,7 @@ body.interview .btn-nav:hover {
         radial-gradient(1px 1px at 300px 40px, rgba(255,255,255,0.4), transparent);
     background-size: 350px 100px;
     animation: snowfall-jeju-card 10s linear infinite;
-    opacity: 0.6;
+    opacity: 1;
     pointer-events: none;
     z-index: 0;
 }
@@ -3624,7 +3623,6 @@ body.interview .btn-nav:hover {
 
 .period-preview.jeju-card .card-meta {
     border-top: 1px solid #e0e0e0;
-    color: #6c757d;
     position: relative;
     z-index: 1;
 }
@@ -3637,11 +3635,7 @@ body.interview .btn-nav:hover {
     border-left-width: 6px;
 }
 
-/* Effet neige plus visible au hover */
-.period-preview.jeju-card:hover::before {
-    opacity: 0.8;
-    animation-duration: 8s;
-}
+
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
@@ -3669,5 +3663,390 @@ body.interview .btn-nav:hover {
     .period-preview.interview-card p,
     .period-preview.jeju-card p {
         font-size: 0.95rem;
+    }
+}
+/* Contrôles PDF */
+/* Layout PDF + Infos */
+.pdf-layout {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: stretch;
+}
+
+/* Section PDF à gauche (contrôles + canvas) */
+.pdf-section {
+    max-width: 50% !important;
+    flex-direction: column;
+display: flex;
+}
+
+/* Contrôles PDF */
+.pdf-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1rem 1.5rem;
+    border: 2px solid #8e44ad;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+}
+
+.pdf-nav-btn {
+    background: linear-gradient(135deg, #8e44ad 0%, #6c3483 100%);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
+
+}
+
+.pdf-nav-btn:hover {
+    background: linear-gradient(135deg, #6c3483 0%, #5b2c6f 100%);
+    transform: translateY(-2px);
+}
+
+.pdf-nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.pdf-page-info {
+    color: #ecf0f1;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+}
+
+/* Wrapper du canvas */
+.pdf-viewer-wrapper {
+    position: relative;
+    background: #2c3e50;
+    border: 3px solid #8e44ad;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    height: calc(var(--pdf-info-sidebar-height, 600px) + 4rem);
+}
+
+#pdf-canvas {
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-left:-25%;
+    margin-top:-33%
+}
+
+/* Sidebar d'informations à droite */
+.pdf-info-sidebar {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border: 2px solid #8e44ad;
+    border-left: 5px solid #8e44ad;
+    border-radius: 8px;
+    color: #ecf0f1;
+    position: sticky;
+    top: 20px;
+}
+
+.info-item {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.info-label {
+    color: #8e44ad;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    color: #ecf0f1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.info-divider {
+    height: 2px;
+    background: linear-gradient(to right, #8e44ad, transparent);
+    margin: 1.5rem 0;
+}
+
+/* Section analyse */
+.info-analysis {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(142, 68, 173, 0.1);
+    border-left: 3px solid #8e44ad;
+    border-radius: 4px;
+}
+
+.info-analysis h5 {
+    color: #f39c12;
+    font-size: 1.1rem;
+    margin: 0 0 0.8rem 0;
+}
+
+.info-analysis p {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Encadré impact */
+.info-highlight {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(231, 76, 60, 0.15);
+    border-left: 4px solid #e74c3c;
+    border-radius: 4px;
+}
+
+.info-highlight strong {
+    display: block;
+    color: #e74c3c;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.info-highlight ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: #ecf0f1;
+}
+
+.info-highlight li {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .pdf-layout {
+        flex-direction: column;
+    }
+
+    .pdf-section {
+        flex: 1 1 100%;
+    }
+
+    .pdf-viewer-wrapper {
+        max-height: 600px;
+    }
+
+    .pdf-info-sidebar {
+        width: 100%;
+        position: static;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .pdf-controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pdf-nav-btn {
+        width: 100%;
+    }
+
+    .pdf-viewer-wrapper {
+        max-height: 500px;
+        padding: 1rem;
+    }
+
+    .pdf-info-sidebar {
+        padding: 1rem;
+    }
+}
+
+.document-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 3px solid rgba(231, 76, 60, 0.5);
+    border-left: 8px solid #e74c3c;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.document-box.archives {
+    border-color: rgba(142, 68, 173, 0.5);
+    border-left-color: #8e44ad;
+}
+
+.document-box .doc-badge {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    background: #8e44ad;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.document-box h4 {
+    color: #e74c3c;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Commentaire/analyse du traité */
+.treaty-commentary {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 3px solid rgba(142, 68, 173, 0.5);
+}
+
+.treaty-commentary h3 {
+    color: #8e44ad;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+.commentary-section h4 {
+    color: #f39c12;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(243, 156, 18, 0.3);
+}
+
+
+.article-analysis h5 {
+    color: #8e44ad;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.article-analysis p {
+    color: #ecf0f1;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.article-analysis ol {
+    margin-left: 1.5rem;
+    color: #ecf0f1;
+}
+
+.article-analysis ol li {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+
+
+.understanding-box strong {
+    display: block;
+    color: #e74c3c;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.understanding-box p {
+    margin: 0;
+    color: #ecf0f1;
+    line-height: 1.7;
+}
+
+
+
+.implication-box h5 {
+    color: #3498db;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.implication-box p {
+    color: #ecf0f1;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+.debate-box h5 {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.debate-box p {
+    color: #ecf0f1;
+    line-height: 1.7;
+}
+
+.debate-box ul {
+    margin-left: 1.5rem;
+    color: #ecf0f1;
+}
+
+.debate-box ul li {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+
+
+.commentary-conclusion h4 {
+    color: #f39c12;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(243, 156, 18, 0.3);
+}
+
+.commentary-conclusion p {
+    color: #ecf0f1;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.commentary-conclusion p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .treaty-commentary {
+        margin-top: 2rem;
+    }
+
+    .article-analysis {
+        padding: 1rem;
+    }
+
+    .treaty-commentary h3 {
+        font-size: 1.5rem;
+    }
+
+    .commentary-section h4 {
+        font-size: 1.3rem;
     }
 }
