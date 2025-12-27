@@ -12,7 +12,6 @@ body {
 
 .container {
     max-width: 1200px;
-    padding: 2rem 1rem;
 }
 
 /* ========== SECTION SOURCES (toutes périodes) ========== */
@@ -70,7 +69,7 @@ body {
 }
 
 .period1 header::before {
-    content: '38° PARALLEL';
+    content: '38° PARALLÈLE';
     position: absolute;
     top: 10px;
     right: 20px;
@@ -131,6 +130,10 @@ nav.navbar {
     color: #e74c3c !important;
     box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
 }
+.period1 .navbar-collapse {
+    background: rgba(231, 76, 60, 1);
+}
+
 
 .period1 footer {
     background: rgba(0,0,0,0.9);
@@ -488,6 +491,10 @@ nav.navbar {
     transform: rotate(-2deg);
     box-shadow: 4px 4px 0px #fff;
 }
+.period2 .navbar-collapse {
+    background: #000;
+}
+
 
 .period2 footer {
     background: #000;
@@ -711,6 +718,15 @@ nav.navbar {
     transform: translateY(-2px);
 }
 
+.period3 .navbar-collapse {
+    background: #fff;
+}
+.period3 .navbar-toggler {
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+
 .period3 footer {
     background: 
         linear-gradient(135deg, #003478 0%, #cd202c 100%);
@@ -932,6 +948,10 @@ nav.navbar {
     border: 2px solid transparent;
     font-family: 'Georgia', serif;
     letter-spacing: 1px;
+}
+
+.period4 .navbar-collapse {
+    background: rgba(26, 26, 46, 1);
 }
 
 .period4 .navbar-nav .nav-link:hover {
@@ -1353,6 +1373,12 @@ body.period4 .text-beside-image h3 {
     background: #e74c3c;
     color: #fff;
 }
+.period1 .nav-home {
+    border: 2px solid #e74c3c;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    border-radius: 8px;
+}
 
 .period2 .btn-biblio {
     border: 3px solid #ff3b30;
@@ -1556,6 +1582,9 @@ body.period4 .text-beside-image h3 {
 .home .navbar-nav .nav-link:hover {
     background: rgba(139, 69, 19, 0.4);
     color: #fff !important;
+}
+.home .navbar-collapse {
+    background: #2c2c2c;
 }
 
 .home footer {
@@ -2102,6 +2131,10 @@ body.period4 .text-beside-image h3 {
     border-bottom: 2px solid #8b0000;
 }
 
+.jeju .navbar-collapse {
+    background: #1a1a1a;
+}
+
 .jeju .navbar-nav .nav-link {
     color: #f5f5f5 !important;
     font-weight: 400;
@@ -2602,7 +2635,6 @@ body.jeju .container {
     z-index: 1;
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
 }
 
 /* Lien retour */
@@ -3185,8 +3217,12 @@ body.interview nav.navbar {
     border-bottom: 1px solid #4a4a4a;
 }
 
+
 body.interview .navbar-nav .nav-link {
     color: #e0e0e0 !important;
+        background: #2a2a2a !important;
+
+
 }
 
 body.interview .navbar-nav .nav-link:hover {
@@ -3194,18 +3230,19 @@ body.interview .navbar-nav .nav-link:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
+
 /* Footer */
 body.interview footer {
     background: #2a2a2a !important;
     border-top: 3px solid #4a4a4a;
     color: #a0a0a0;
+    padding: 2rem;
 }
 
 /* Container */
 body.interview .container {
     max-width: 850px;
     margin: 0 auto;
-    padding: 3rem 2rem;
 }
 
 /* Lien retour */
@@ -3418,6 +3455,7 @@ body.interview .navigation-section {
     justify-content: space-between;
     margin-top: 4rem;
     padding-top: 2rem;
+    padding-bottom: 2rem;
     border-top: 2px solid #d0cdc0;
     flex-wrap: wrap;
     gap: 1rem;
@@ -3942,7 +3980,7 @@ display: flex;
 
 
 .article-analysis h5 {
-    color: #8e44ad;
+    color: #c492d9;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
