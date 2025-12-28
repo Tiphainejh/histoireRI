@@ -12,3 +12,4 @@ __pycache__/
 .Python
 
 .vercel
+.DS_Store
