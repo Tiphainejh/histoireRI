@@ -8,11 +8,11 @@ Le mini-site sera organisé en rubriques ou blocs. Ils devront présenter a mini
 - [ ]  des rubriques (ou blocs) de textes complémentaires (focus thématiques,
 portraits…),
 - [x]  une rubrique de bibliographie, sources et liens utiles,
-- [ ]  une ou des rubriques « documents » relatifs au sujet que vous devez
+-   une ou des rubriques « documents » relatifs au sujet que vous devez
 commenter/présenter, dont au moins :
     - [x]  un document d’archives
-    - [ ]  une image
-    - [ ]  un texte scientifique (article)
+    - [x]  une image
+    - [x]  un texte scientifique (article)
 - [x]  2 ressources issues d’un travail personnel faisant clairement apparaître votre
 apport créatif propre : podcast, interview, vidéo, photographies personnelles,
 essai…

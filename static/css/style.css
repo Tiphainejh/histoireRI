@@ -900,7 +900,587 @@ nav.navbar {
     font-size: 1.1rem;
     margin-bottom: 0.3rem;
 }
+/* ============================================
+   ANALYSE D'IMAGE - PERIOD3
+   Style affiche vintage coréenne, propagande démocratique
+   ============================================ */
 
+.period3 .image-analysis {
+    background: #fff;
+    border: 8px solid #000;
+    padding: 2.5rem;
+    margin: 3rem 0;
+    box-shadow: 
+        12px 12px 0px #003478,
+        24px 24px 0px rgba(205, 32, 44, 0.5);
+    position: relative;
+}
+
+/* Badge analyse avec étoile */
+.period3 .image-analysis::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 35px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border: 5px solid #000;
+    border-radius: 50%;
+}
+
+.period3 .image-analysis::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 45px;
+    width: 40px;
+    height: 40px;
+    background: #003478;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.period3 .doc-badge.analysis-badge {
+    position: absolute;
+    top: -35px;
+    right: 40px;
+    background: #cd202c;
+    color: #fff;
+    padding: 0.6rem 2rem;
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 5px solid #000;
+    box-shadow: 6px 6px 0px #003478;
+    font-family: 'Arial Black', sans-serif;
+    z-index: 10;
+}
+
+/* Référence à l'image */
+.period3 .analyzed-image-reference {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #fff7fe;
+    border: 5px solid #003478;
+    box-shadow: 8px 8px 0px #cd202c;
+}
+
+.period3 .reference-box {
+    text-align: center;
+}
+
+.period3 .reference-box strong {
+    color: #cd202c;
+    font-size: 1.3rem;
+    font-weight: 900;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 0px rgba(0, 52, 120, 0.2);
+}
+
+.period3 .reference-box p {
+    color: #1a1a1a;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.period3 .reference-details {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 4px solid #003478;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.period3 .reference-details strong {
+    color: #003478;
+    font-size: 1rem;
+    font-weight: 900;
+    display: inline;
+}
+
+/* Sections d'analyse */
+.period3 .analysis-section {
+    background: #fff;
+    border: 6px solid #000;
+    border-left: 10px solid #003478;
+    padding: 2.5rem;
+    margin: 2.5rem 0;
+    box-shadow: 
+        10px 10px 0px #cd202c,
+        20px 20px 0px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.period3 .analysis-section::before {
+    content: '▶';
+    position: absolute;
+    top: 20px;
+    left: -35px;
+    font-size: 2rem;
+    color: #cd202c;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.period3 .analysis-section h3 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #cd202c;
+    text-transform: uppercase;
+    text-shadow: 
+        3px 3px 0px rgba(0, 52, 120, 0.3),
+        6px 6px 0px rgba(0, 0, 0, 0.1);
+    margin: 0 0 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 5px solid #003478;
+    letter-spacing: 1px;
+}
+
+.period3 .analysis-section h3::before {
+    content: '★ ';
+    color: #003478;
+}
+
+.period3 .analysis-section h4 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #003478;
+    text-transform: uppercase;
+    margin: 2rem 0 1.2rem 0;
+    text-shadow: 2px 2px 0px rgba(205, 32, 44, 0.2);
+}
+
+.period3 .analysis-section h4::before {
+    content: '▸ ';
+    color: #cd202c;
+}
+
+.period3 .analysis-section h5 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #cd202c;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.period3 .analysis-section p {
+    color: #1a1a1a;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.period3 .analysis-section ul,
+.period3 .analysis-section ol {
+    margin: 1.2rem 0 1.2rem 2.5rem;
+    color: #1a1a1a;
+}
+
+.period3 .analysis-section li {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.period3 .analysis-section li::marker {
+    color: #cd202c;
+    font-weight: 900;
+}
+
+.period3 .analysis-section strong {
+    color: #003478;
+    font-weight: 900;
+}
+
+.period3 .analysis-section em {
+    font-style: italic;
+    color: #555;
+    font-weight: 600;
+}
+
+/* Sous-sections */
+.period3 .analysis-subsection {
+    margin: 2.5rem 0;
+    padding: 2rem;
+    background: #fff7fe;
+    border: 4px solid #003478;
+    border-left: 8px solid #cd202c;
+    box-shadow: 6px 6px 0px rgba(0, 52, 120, 0.2);
+}
+
+/* Encadrés symboles */
+.period3 .symbol-box {
+    background: #fff;
+    border: 5px solid #000;
+    border-left: 10px solid #cd202c;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 
+        8px 8px 0px #003478,
+        16px 16px 0px rgba(205, 32, 44, 0.3);
+    position: relative;
+}
+
+.period3 .symbol-box::before {
+    content: '⚡\FE0E';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 2.5rem;
+    background: #fff;
+    border: 4px solid #000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.period3 .symbol-box::before,
+.period3 .analysis-conclusion::before {
+    font-family: 'Segoe UI Symbol', 'DejaVu Sans', 'Arial Unicode MS', sans-serif!important;
+    /* Polices sans emojis colorés */
+}
+.period3 .symbol-box h5 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #cd202c;
+    text-transform: uppercase;
+    margin: 0 0 1.2rem 0;
+    text-shadow: 2px 2px 0px rgba(0, 52, 120, 0.15);
+}
+
+.period3 .symbol-box p {
+    font-weight: 600;
+}
+
+.period3 .symbol-box ul {
+    margin-left: 2rem;
+}
+
+.period3 .symbol-box li {
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+/* Conclusion analyse */
+.period3 .analysis-conclusion {
+    background: 
+        linear-gradient(135deg, #003478 0%, #cd202c 100%);
+    color: #fff;
+    padding: 3rem;
+    margin-top: 3rem;
+    border: 10px solid #000;
+    box-shadow: 
+        15px 15px 0px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.period3 .analysis-conclusion::before {
+    content: '★\FE0E★\FE0E★\FE0E';
+    position: absolute;
+    top: -40px;
+    right: 30px;
+    font-size: 4rem;
+    filter: 
+        drop-shadow(3px 3px 0px #000);
+}
+
+.period3 .analysis-conclusion h4 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 2rem 0;
+    text-shadow: 
+        4px 4px 0px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+
+.period3 .analysis-conclusion p {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 2;
+    margin-bottom: 1.8rem;
+    text-align: justify;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.period3 .analysis-conclusion p:last-child {
+    margin-bottom: 0;
+}
+
+.period3 .analysis-conclusion strong {
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.5rem;
+    border-bottom: 3px solid #fff;
+}
+
+/* Version avec vignette (si utilisée) */
+.period3 .analyzed-image-reference.with-thumbnail {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.period3 .thumbnail-wrapper {
+    text-align: center;
+}
+
+.period3 .thumbnail-wrapper img {
+    width: 100%;
+    border: 6px solid #003478;
+    box-shadow: 6px 6px 0px #cd202c;
+}
+
+.period3 .thumbnail-caption {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+}
+
+.period3 .reference-info strong {
+    font-family: 'Arial Black', sans-serif;
+    color: #cd202c;
+    font-size: 1.2rem;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.period3 .reference-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.period3 .reference-info li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: #fff7fe;
+    border-left: 4px solid #003478;
+    font-weight: 700;
+}
+
+.period3 .reference-info li strong {
+    color: #cd202c;
+    font-size: 0.95rem;
+    display: inline;
+    font-weight: 900;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .period3 .doc-badge.analysis-badge {
+        top: -30px;
+        right: 20px;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.75rem;
+    }
+
+    .period3 .image-analysis {
+        padding: 1.5rem;
+        box-shadow: 
+            8px 8px 0px #003478,
+            16px 16px 0px rgba(205, 32, 44, 0.3);
+    }
+
+    .period3 .analyzed-image-reference {
+        padding: 1.5rem;
+    }
+
+    .period3 .analysis-section {
+        padding: 1.5rem;
+        box-shadow: 
+            6px 6px 0px #cd202c,
+            12px 12px 0px rgba(0,0,0,0.1);
+    }
+
+    .period3 .analysis-section h3 {
+        font-size: 1.6rem;
+    }
+
+    .period3 .analysis-section h4 {
+        font-size: 1.3rem;
+    }
+
+    .period3 .analysis-subsection {
+        padding: 1.2rem;
+    }
+
+    .period3 .symbol-box {
+        padding: 1.5rem;
+        box-shadow: 
+            6px 6px 0px #003478,
+            12px 12px 0px rgba(205, 32, 44, 0.2);
+    }
+
+    .period3 .analysis-conclusion {
+        padding: 2rem;
+    }
+
+    .period3 .analysis-conclusion h4 {
+        font-size: 1.5rem;
+    }
+
+    .period3 .analyzed-image-reference.with-thumbnail {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations au survol */
+.period3 .symbol-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        10px 10px 0px #003478,
+        20px 20px 0px rgba(205, 32, 44, 0.4);
+}
+
+.period3 .analysis-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        12px 12px 0px #cd202c,
+        24px 24px 0px rgba(0,0,0,0.2);
+}
+.period3 .analysis-intro {
+    background: #fff7fe;
+    border-left: 6px solid #cd202c;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+.period3 .analysis-intro strong {
+    color: #cd202c;
+    font-weight: 900;
+}
+/* ============================================
+   LIENS DANS L'ANALYSE D'IMAGE - PERIOD3
+   ============================================ */
+
+/* Liens internes vers d'autres pages (periode1, jeju, etc.) */
+.period3 .analysis-section a {
+    color: #cd202c;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.period3 .analysis-section a:hover {
+    color: #003478;
+    border-bottom-color: #003478;
+}
+
+/* Liens de citation (superscript) */
+.period3 .analysis-section sup a.citation-link {
+    color: #003478;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 0.1rem 0.3rem;
+    border: none;
+    border-bottom: none;
+    font-size: 0.85rem;
+}
+
+.period3 .analysis-section sup a.citation-link:hover {
+    color: #cd202c;
+    background: rgba(205, 32, 44, 0.1);
+    border-radius: 3px;
+}
+
+/* Note de contexte (bas de section) */
+.period3 .context-note {
+    background: rgba(0, 52, 120, 0.1);
+    border-left: 4px solid #003478;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.period3 .context-note strong {
+    color: #003478;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.period3 .context-note a {
+    color: #cd202c;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.period3 .context-note a:hover {
+    border-bottom-color: #cd202c;
+    background: rgba(205, 32, 44, 0.05);
+    padding: 0.1rem 0.3rem;
+    margin: -0.1rem -0.3rem;
+}
+
+/* Liens dans les listes à puces */
+.period3 .analysis-section ul li a,
+.period3 .analysis-section ol li a {
+    color: #003478;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px dotted #003478;
+}
+
+.period3 .analysis-section ul li a:hover,
+.period3 .analysis-section ol li a:hover {
+    color: #cd202c;
+    border-bottom-color: #cd202c;
+    background: rgba(205, 32, 44, 0.05);
+}
+
+/* Liens externes (avec flèche) */
+.period3 .analysis-section a[href^="http"]::after {
+    content: ' ↗';
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+
+.period3 .analysis-section a[href^="http"]:hover::after {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .period3 .context-note {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+}
 /* ============================================
    PÉRIODE 4: 2000-2020 - VEILLEURS AUX CHANDELLES
    Style sobre, tons chauds, lumière des bougies
