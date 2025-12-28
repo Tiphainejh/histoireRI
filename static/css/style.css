@@ -621,7 +621,421 @@ nav.navbar {
 .period2 .source-item span {
     color: #fff;
 }
+/* ============================================
+   PORTRAIT DE RÉSISTANT - PARK JONG-CHUL
+   ============================================ */
 
+.period2 .rubrique-complementaire.portrait {
+    background: #000;
+    border: 8px solid #dc143c;
+    padding: 2.5rem;
+    margin: 3rem 0;
+    position: relative;
+    box-shadow: 
+        12px 12px 0px rgba(220, 20, 60, 0.6),
+        24px 24px 0px rgba(0,0,0,0.4);
+    transform: rotate(-0.5deg);
+}
+
+
+.period2 .doc-badge.article-badge {
+    display: inline-block;
+    background: #dc143c;
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    border: 4px solid #fff;
+    box-shadow: 
+        5px 5px 0px #000,
+        10px 10px 0px rgba(220, 20, 60, 0.5);
+    transform: rotate(-2deg);
+    margin-bottom: 1.5rem;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.period2 .portrait h2 {
+    font-size: 2.8rem;
+    color: #fff;
+    text-shadow: 
+        4px 4px 0px #dc143c,
+        8px 8px 0px #000;
+    margin: 1rem 0 2rem 0;
+    transform: rotate(-1deg);
+    display: inline-block;
+}
+
+.period2 .portrait h2::before {
+    content: '★ ';
+    color: #dc143c;
+}
+
+.period2 .portrait-intro {
+   
+    border: 5px solid #dc143c;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    box-shadow: 
+        8px 8px 0px rgba(255, 255, 255, 0.2),
+        -8px -8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.period2 .portrait-intro p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin: 0;
+    font-weight: 700;
+    color: #fff;
+}
+
+.period2 .portrait h3 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.8rem;
+    color: #dc143c;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px #000;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-left: 8px solid #dc143c;
+    padding-left: 1rem;
+    transform: skew(-2deg);
+}
+
+.period2 .portrait h3::before {
+    content: '▶ ';
+    color: #fff;
+}
+
+.period2 .portrait p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    color: #e0e0e0;
+}
+
+.period2 .portrait ul {
+    margin: 1.5rem 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.period2 .portrait ul li {
+    background: rgba(220, 20, 60, 0.1);
+    border-left: 5px solid #dc143c;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    position: relative;
+}
+
+.period2 .portrait ul li::before {
+    content: '✖';
+    color: #dc143c;
+    font-weight: 900;
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.period2 .portrait ul li strong {
+    color: #dc143c;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.period2 .highlight-box {
+    background: rgba(231, 76, 60, 0.15);
+    border: 5px solid #e74c3c;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+    box-shadow: 
+        6px 6px 0px rgba(231, 76, 60, 0.4),
+        12px 12px 0px rgba(0, 0, 0, 0.3);
+    transform: rotate(0.5deg);
+}
+
+
+.period2 .highlight-box strong {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.8rem;
+    text-shadow: 1px 1px 0px #000;
+}
+
+.period2 .highlight-box p {
+    margin: 0.5rem 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.period2 .highlight-box p em {
+    font-style: italic;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.2rem 0.4rem;
+}
+
+.period2 .citation-bloc {
+    background: #000;
+    color: #fff;
+    border: 6px solid #dc143c;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    position: relative;
+    box-shadow: 
+        10px 10px 0px rgba(220, 20, 60, 0.5),
+        20px 20px 0px rgba(0, 0, 0, 0.3);
+    transform: rotate(-1deg);
+}
+
+.period2 .citation-bloc::before {
+    content: '"';
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    font-size: 6rem;
+    color: #dc143c;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+}
+
+.period2 .citation-bloc p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    padding-left: 2rem;
+}
+
+.period2 .citation-bloc p em {
+    font-style: italic;
+    color: #fff;
+}
+
+.period2 .citation-bloc .citation-source {
+    display: block;
+    margin-top: 1.5rem;
+    color: #bdc3c7;
+    font-size: 0.95rem;
+    text-align: right;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+.period2 .citation-bloc .citation-source::before {
+    content: '— ';
+    color: #dc143c;
+}
+
+/* Style pour les citations intégrées dans les highlight-box */
+.period2 .highlight-box .citation-bloc {
+    background: rgba(0, 0, 0, 0.6);
+    border: 3px solid #000;
+    transform: rotate(0deg);
+    box-shadow: none;
+}
+
+/* Lien de citation dans le portrait */
+.period2 .portrait .citation-link {
+    color: #dc143c;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 0 0.2rem;
+    border-bottom: 2px solid rgba(220, 20, 60, 0.3);
+    transition: all 0.2s ease;
+}
+
+.period2 .portrait .citation-link:hover {
+    background: #dc143c;
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .period2 .rubrique-complementaire.portrait {
+        padding: 1.5rem;
+        border-width: 5px;
+        box-shadow: 
+            6px 6px 0px rgba(220, 20, 60, 0.6),
+            12px 12px 0px rgba(0,0,0,0.4);
+    }
+    
+    .period2 .portrait h2 {
+        font-size: 2rem;
+    }
+    
+    .period2 .portrait h3 {
+        font-size: 1.4rem;
+    }
+    
+    .period2 .citation-bloc {
+        padding: 1.5rem;
+        box-shadow: 
+            6px 6px 0px rgba(220, 20, 60, 0.5),
+            12px 12px 0px rgba(0, 0, 0, 0.3);
+    }
+    
+    .period2 .citation-bloc p {
+        font-size: 1.05rem;
+        padding-left: 1rem;
+    }
+    
+    .period2 .rubrique-complementaire.portrait::before {
+        font-size: 4rem;
+        opacity: 0.5;
+    }
+}
+
+/* ============================================
+   PHOTO PORTRAIT - PARK JONG-CHUL
+   ============================================ */
+
+.period2 .portrait-photo {
+    margin: 2rem 0 3rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.period2 .portrait-photo img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border: 8px solid #fff;
+    box-shadow: 
+        0 0 0 3px #dc143c,
+        12px 12px 0px rgba(220, 20, 60, 0.6),
+        24px 24px 0px rgba(0, 0, 0, 0.5);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    filter: grayscale(20%) contrast(1.1);
+}
+
+.period2 .portrait-photo img:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 
+        0 0 0 3px #dc143c,
+        16px 16px 0px rgba(220, 20, 60, 0.8),
+        32px 32px 0px rgba(0, 0, 0, 0.6);
+}
+
+.period2 .portrait-photo figcaption {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 2px 2px 0px #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            rgba(220, 20, 60, 0.1) 0px,
+            rgba(220, 20, 60, 0.1) 5px,
+            transparent 5px,
+            transparent 10px
+        );
+    padding: 1rem;
+    border-top: 4px solid #dc143c;
+    border-bottom: 4px solid #dc143c;
+    display: inline-block;
+    min-width: 60%;
+}
+
+.period2 .portrait-photo .photo-subtitle {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #dc143c;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+
+.period2 .portrait-photo::after {
+    content: '1965-1987';
+    position: absolute;
+    bottom: 20px;
+    right: 10%;
+    background: #dc143c;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border: 4px solid #fff;
+    box-shadow: 
+        4px 4px 0px #000,
+        8px 8px 0px rgba(0, 0, 0, 0.5);
+    transform: rotate(5deg);
+    font-family: 'Impact', sans-serif;
+}
+
+/* Version alternative avec encadré style "WANTED POSTER" */
+.period2 .portrait-photo.wanted-style {
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            #1a1a1a 0px,
+            #1a1a1a 2px,
+            transparent 2px,
+            transparent 4px
+        );
+    border: 10px solid #dc143c;
+    padding: 2rem;
+    box-shadow: 
+        inset 0 0 0 5px #000,
+        15px 15px 0px rgba(220, 20, 60, 0.4),
+        30px 30px 0px rgba(0, 0, 0, 0.3);
+    transform: rotate(-1deg);
+}
+
+.period2 .portrait-photo.wanted-style::before {
+    content: '민주 열사';
+    /* "Martyr démocratique" en coréen */
+    font-size: 2rem;
+    top: 10px;
+    color: #fff;
+    background: #dc143c;
+    padding: 0.5rem 2rem;
+    border: 4px solid #fff;
+    font-family: 'Arial Black', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .period2 .portrait-photo img {
+        max-width: 100%;
+        border-width: 5px;
+        box-shadow: 
+            0 0 0 2px #dc143c,
+            8px 8px 0px rgba(220, 20, 60, 0.6),
+            16px 16px 0px rgba(0, 0, 0, 0.5);
+    }
+    
+    .period2 .portrait-photo figcaption {
+        font-size: 1rem;
+        min-width: 80%;
+    }
+    
+    .period2 .portrait-photo::after {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+        right: 5%;
+    }
+    
+    .period2 .portrait-photo.wanted-style {
+        padding: 1rem;
+        border-width: 6px;
+    }
+}
 /* ============================================
    PÉRIODE 3: 1987-2000 - PROPAGANDE DÉMOCRATIQUE
    Style affiche vintage coréenne, drapeau taegukgi
@@ -1381,106 +1795,7 @@ nav.navbar {
     color: #cd202c;
     font-weight: 900;
 }
-/* ============================================
-   LIENS DANS L'ANALYSE D'IMAGE - PERIOD3
-   ============================================ */
 
-/* Liens internes vers d'autres pages (periode1, jeju, etc.) */
-.period3 .analysis-section a {
-    color: #cd202c;
-    text-decoration: none;
-    font-weight: 700;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.period3 .analysis-section a:hover {
-    color: #003478;
-    border-bottom-color: #003478;
-}
-
-/* Liens de citation (superscript) */
-.period3 .analysis-section sup a.citation-link {
-    color: #003478;
-    text-decoration: none;
-    font-weight: 900;
-    padding: 0.1rem 0.3rem;
-    border: none;
-    border-bottom: none;
-    font-size: 0.85rem;
-}
-
-.period3 .analysis-section sup a.citation-link:hover {
-    color: #cd202c;
-    background: rgba(205, 32, 44, 0.1);
-    border-radius: 3px;
-}
-
-/* Note de contexte (bas de section) */
-.period3 .context-note {
-    background: rgba(0, 52, 120, 0.1);
-    border-left: 4px solid #003478;
-    padding: 1rem 1.5rem;
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    font-style: italic;
-}
-
-.period3 .context-note strong {
-    color: #003478;
-    font-weight: 900;
-    font-style: normal;
-}
-
-.period3 .context-note a {
-    color: #cd202c;
-    text-decoration: none;
-    font-weight: 700;
-    border-bottom: 1px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.period3 .context-note a:hover {
-    border-bottom-color: #cd202c;
-    background: rgba(205, 32, 44, 0.05);
-    padding: 0.1rem 0.3rem;
-    margin: -0.1rem -0.3rem;
-}
-
-/* Liens dans les listes à puces */
-.period3 .analysis-section ul li a,
-.period3 .analysis-section ol li a {
-    color: #003478;
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 1px dotted #003478;
-}
-
-.period3 .analysis-section ul li a:hover,
-.period3 .analysis-section ol li a:hover {
-    color: #cd202c;
-    border-bottom-color: #cd202c;
-    background: rgba(205, 32, 44, 0.05);
-}
-
-/* Liens externes (avec flèche) */
-.period3 .analysis-section a[href^="http"]::after {
-    content: ' ↗';
-    font-size: 0.8em;
-    opacity: 0.6;
-}
-
-.period3 .analysis-section a[href^="http"]:hover::after {
-    opacity: 1;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .period3 .context-note {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-    }
-}
 /* ============================================
    PÉRIODE 4: 2000-2020 - VEILLEURS AUX CHANDELLES
    Style sobre, tons chauds, lumière des bougies
