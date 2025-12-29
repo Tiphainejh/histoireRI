@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<!-- Dans le <head> de base.html -->
-<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/svg+xml">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}L'évolution de l'hégémonie américaine en Corée du Sud{% endblock %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-</head>
-<body class="{% block body_class %}{% endblock %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
     <header class="text-white text-center">
-        <div class="container">
-            <h1 class="display-4">L'évolution de l'hégémonie américaine en Corée du Sud : </h1>
-            <p class="lead">Entre alliance et dépendance (1945-2020)</p>
-        </div>
+      <div class="container">
+        <h1 class="display-4">L'évolution de l'hégémonie américaine en Corée du Sud :</h1>
+        <p class="lead">Entre alliance et dépendance (1945-2020)</p>
+      </div>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/periode1">1945-1960</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/periode2">1960-1987</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/periode3">1987-2000</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/periode4">2000-2020</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/conclusion">Conclusion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/ressources">Ressources</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/periode1">1945-1960</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/periode2">1960-1987</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/periode3">1987-2000</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/periode4">2000-2020</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/conclusion">Conclusion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/ressources">Ressources</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+    <main>{% block content %}{% endblock %}</main>
 
     <footer class="text-center">
-        <div class="container">
-            <p>2025 - Projet Histoire des Relations Internationales - Tiphaine RICHARD</p>
-        </div>
+      <div class="container">
+        <p>2025 - Projet Histoire des Relations Internationales - Tiphaine RICHARD</p>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
