@@ -2775,7 +2775,234 @@ body.period4 .text-beside-image h3 {
   font-size: 1.8rem !important;
   margin-bottom: 1rem !important;
 }
+.period4 .portrait-box {
+  background: linear-gradient(135deg, rgba(45, 31, 61, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+  border: 3px solid #f39c12;
+  border-left: 8px solid #f39c12;
+  padding: 2.5rem;
+  margin: 3rem 0;
+  box-shadow: 0 5px 30px rgba(243, 156, 18, 0.3), inset 0 0 60px rgba(243, 156, 18, 0.05);
+}
 
+.period4 .portrait-box h3 {
+  color: #f39c12;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 3px solid rgba(243, 156, 18, 0.4);
+  padding-bottom: 0.8rem;
+  text-shadow: 2px 2px 10px rgba(243, 156, 18, 0.3);
+}
+
+.period4 .portrait-box h4 {
+  color: #f39c12;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-left: 4px solid #f39c12;
+  padding-left: 1rem;
+}
+
+/* Portrait Intro */
+.period4 .portrait-intro {
+  background: rgba(243, 156, 18, 0.1);
+  padding: 1.5rem;
+  border-left: 5px solid #f39c12;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.2);
+}
+
+.period4 .portrait-intro p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Age Breakdown - Les 3-8-6 */
+.period4 .generation-definition {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border: 2px solid rgba(243, 156, 18, 0.2);
+  margin: 2rem 0;
+}
+
+.period4 .age-breakdown {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.period4 .age-item {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(243, 156, 18, 0.1);
+  border: 2px solid rgba(243, 156, 18, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.period4 .age-item:hover {
+  transform: translateY(-5px);
+  background: rgba(243, 156, 18, 0.15);
+  border-color: #f39c12;
+  box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+}
+
+.period4 .age-item .number {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #f39c12;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(243, 156, 18, 0.5);
+  font-family: "Georgia", serif;
+}
+
+.period4 .age-item strong {
+  color: #fff;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.period4 .age-item p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.period4 .age-item em {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+/* Sections de contenu */
+.period4 .generation-context,
+.period4 .generation-power,
+.period4 .generation-vision,
+.period4 .generation-controversies,
+.period4 .generation-policy,
+.period4 .generation-polarization,
+.period4 .generation-reforms,
+.period4 .generation-assembly {
+  margin: 2rem 0;
+}
+
+.period4 .generation-context p,
+.period4 .generation-power p,
+.period4 .generation-vision p,
+.period4 .generation-controversies p,
+.period4 .generation-policy p,
+.period4 .generation-polarization p,
+.period4 .generation-reforms p,
+.period4 .generation-assembly p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+/* Listes */
+.period4 .reforms-list,
+.period4 .vision-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+.period4 .reforms-list li,
+.period4 .vision-list li {
+  background: rgba(243, 156, 18, 0.08);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #f39c12;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.period4 .reforms-list li:hover,
+.period4 .vision-list li:hover {
+  background: rgba(243, 156, 18, 0.15);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+}
+
+.period4 .reforms-list strong,
+.period4 .vision-list strong {
+  color: #f39c12;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Legacy / Impact */
+.period4 .generation-legacy {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(243, 156, 18, 0.3);
+}
+
+.period4 .portrait-impact {
+  background: rgba(243, 156, 18, 0.15);
+  padding: 1.8rem;
+  border: 2px solid #f39c12;
+  border-left: 6px solid #f39c12;
+  margin: 0;
+  line-height: 1.8;
+  box-shadow: 0 0 25px rgba(243, 156, 18, 0.3), inset 0 0 30px rgba(243, 156, 18, 0.1);
+}
+
+.period4 .portrait-impact strong {
+  color: #f39c12;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .period4 .age-breakdown {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .period4 .portrait-box {
+    padding: 1.8rem;
+  }
+  
+  .period4 .age-item .number {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .period4 .portrait-box {
+    padding: 1.5rem;
+    border-left-width: 5px;
+  }
+  
+  .period4 .portrait-box h3 {
+    font-size: 1.3rem;
+  }
+  
+  .period4 .portrait-box h4 {
+    font-size: 1.15rem;
+  }
+  
+  .period4 .age-item {
+    padding: 1.5rem 1rem;
+  }
+  
+  .period4 .age-item .number {
+    font-size: 2.5rem;
+  }
+}
 /* ============================================
    8. PAGE JEJU - STYLE NEIGE ET MÉMOIRE
    ============================================ */
