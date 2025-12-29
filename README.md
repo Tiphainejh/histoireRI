@@ -5,7 +5,7 @@ Le mini-site sera organisé en rubriques ou blocs. Ils devront présenter a mini
 
 - [x]  une synthèse rédigée centrale composée d’une page de titre et d’un bloc texte
 (entre 1000 et 1 500 mots environ soit l’équivalent de 4 à 6 pages word),
-- [ ]  des rubriques (ou blocs) de textes complémentaires (focus thématiques,
+- [x]  des rubriques (ou blocs) de textes complémentaires (focus thématiques,
 portraits…),
 - [x]  une rubrique de bibliographie, sources et liens utiles,
 -   une ou des rubriques « documents » relatifs au sujet que vous devez

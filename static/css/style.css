@@ -2508,6 +2508,7 @@ footer {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
+
 .period4 h2 {
   font-family: "Georgia", serif;
   font-size: 2rem;
@@ -2776,12 +2777,7 @@ body.period4 .text-beside-image h3 {
   margin-bottom: 1rem !important;
 }
 .period4 .portrait-box {
-  background: linear-gradient(135deg, rgba(45, 31, 61, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
-  border: 3px solid #f39c12;
-  border-left: 8px solid #f39c12;
-  padding: 2.5rem;
-  margin: 3rem 0;
-  box-shadow: 0 5px 30px rgba(243, 156, 18, 0.3), inset 0 0 60px rgba(243, 156, 18, 0.05);
+  position: relative;
 }
 
 .period4 .portrait-box h3 {
@@ -2804,7 +2800,21 @@ body.period4 .text-beside-image h3 {
   border-left: 4px solid #f39c12;
   padding-left: 1rem;
 }
-
+.period4 .doc-badge.generation-badge {
+  position: absolute;
+  top: -55px;
+  right: 20px;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: #1a1a2e;
+  padding: 0.5rem 1.5rem;
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 2px solid #1a1a2e;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+  z-index: 10;
+}
 /* Portrait Intro */
 .period4 .portrait-intro {
   background: rgba(243, 156, 18, 0.1);
